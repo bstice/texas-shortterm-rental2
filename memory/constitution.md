@@ -1,192 +1,222 @@
 <!--
 Sync Impact Report:
-- Version: 1.0.0 (Initial ratification)
-- This is the initial constitution for the texas-shortterm-rental project
-- Establishes 6 core principles focused on rental management best practices
-- Templates: ✅ All templates reviewed and compatible with these principles
-- No deferred TODOs
+- Version: 2.0.0 (Major revision - scope change)
+- Previous version was over-engineered for multi-property booking platform
+- Updated to reflect single-property guest guidebook website
+- Removed: Payment processing, booking systems, complex security, multi-tenancy
+- Added: Content-first principles, mobile-first design, guest experience focus
+- Simplified from 6 to 4 core principles
+- Templates: ✅ All templates reviewed and compatible
 -->
 
-# Texas Short-Term Rental Constitution
+# Texas Short-Term Rental Guidebook Constitution
+
+## Project Scope
+
+This is a **single-property digital guidebook website** for short-term rental guests. The guidebook provides comprehensive property information, local recommendations, and helpful resources to enhance the guest experience during their stay.
 
 ## Core Principles
 
-### I. Data Integrity First
+### I. Content Clarity First
 
-All rental data (bookings, payments, guest information, property details) MUST maintain consistency and accuracy at all times. This includes:
+All information MUST be clear, accurate, and easy for guests to understand:
 
-- Bookings cannot overlap for the same property
-- Payment records must be immutable once processed
-- Guest information must be validated before storage
-- Property availability must reflect real-time booking status
-- All financial transactions must be auditable
+- Information organized by logical categories (property details, local recommendations, emergency contacts)
+- Plain language - no jargon or complex terminology
+- Key information accessible within 2 clicks from homepage
+- Search functionality to quickly find specific items (e.g., "WiFi password", "coffee maker")
+- Content must be scannable with clear headings and bullet points
+- All room-specific information clearly labeled by room name/number
+- Emergency information prominently displayed and easy to find
 
-**Rationale**: Short-term rental management requires absolute trust in data accuracy. Double bookings, lost payments, or incorrect guest information can result in legal issues, financial loss, and reputation damage.
+**Rationale**: Guests arrive tired, may be in a hurry, or dealing with issues (broken appliance, can't find supplies). Information must be immediately accessible and understandable.
 
-### II. Security & Privacy (NON-NEGOTIABLE)
+### II. Mobile-First Design (NON-NEGOTIABLE)
 
-Guest personal information and payment data MUST be protected according to industry standards and Texas privacy laws:
+The guidebook MUST work beautifully on mobile devices as this is how 90%+ of guests will access it:
 
-- All sensitive data encrypted at rest and in transit
-- PCI-DSS compliance for payment processing
-- Guest data access limited to authorized users only
-- Audit logs for all data access and modifications
-- Regular security assessments and penetration testing
-- No storage of full credit card numbers or CVV codes
+- Responsive design that adapts to phone, tablet, and desktop
+- Touch-friendly navigation with large tap targets
+- Fast loading times (< 2 seconds on mobile network)
+- Readable text without zooming (minimum 16px font size)
+- Images optimized for mobile (compressed but high quality)
+- Offline-capable or cached for areas with poor signal
+- No horizontal scrolling required
 
-**Rationale**: Rental platforms handle highly sensitive personal and financial data. Security breaches can result in identity theft, financial fraud, legal liability, and business closure.
+**Rationale**: Guests will primarily access the guidebook on their phones while standing in the kitchen, looking at an appliance, or exploring the area. Desktop optimization is secondary.
 
-### III. User Experience Excellence
+### III. Guest Experience Excellence
 
-The platform MUST prioritize intuitive, efficient workflows for all user types (property owners, guests, administrators):
+The guidebook MUST enhance the guest experience and reduce host inquiries:
 
-- Common tasks completable in 3 clicks or less
-- Mobile-responsive design for all interfaces
-- Clear error messages with actionable guidance
-- Booking process completable in under 3 minutes
-- Real-time updates for availability and booking status
-- Accessibility compliance (WCAG 2.1 AA minimum)
+- Answers common questions proactively (WiFi, parking, check-out procedures)
+- Visual aids where helpful (photos of appliances, maps, diagrams)
+- Step-by-step instructions for complex items (smart TV, thermostat, hot tub)
+- Local recommendations with addresses, hours, and phone numbers
+- Tone should be warm, welcoming, and helpful
+- Anticipate guest needs at different times (arrival, during stay, checkout)
+- Reduce need for guests to contact host for basic information
 
-**Rationale**: In the competitive short-term rental market, user experience directly impacts conversion rates, guest satisfaction, and owner retention.
+**Rationale**: A great guidebook improves guest satisfaction, reduces host interruptions, and leads to better reviews and repeat bookings.
 
-### IV. Compliance & Legal Requirements
+### IV. Easy Content Management
 
-All features MUST comply with Texas short-term rental regulations and local ordinances:
+Property information MUST be easy to update without technical knowledge:
 
-- Occupancy tax collection and remittance capabilities
-- Registration number tracking for properties (where required)
-- Minimum stay enforcement options
-- Guest capacity limits enforcement
-- HOA/condo rule compliance tracking
-- Terms of service acceptance for all parties
+- Content changes should not require code deployment
+- Updates should be immediately visible to guests
+- Non-technical property owner should be able to edit content
+- Version history or backup of previous content
+- Ability to add/update photos without developer help
+- Changes should be testable before going live
 
-**Rationale**: Texas cities (Austin, Dallas, San Antonio, etc.) have varying STR regulations. Non-compliance can result in fines, property bans, and legal action against both platform and property owners.
+**Rationale**: Property details change frequently (WiFi password, local restaurant hours, new amenities). Updates must be quick and simple to keep information accurate.
 
-### V. Test-First Development (NON-NEGOTIABLE)
+## Design & User Experience Standards
 
-All new functionality MUST follow Test-Driven Development:
+### Navigation Structure
 
-- Write tests before implementation
-- User must approve tests before code is written
-- Red-Green-Refactor cycle strictly enforced
-- Integration tests required for:
-  - Booking flow (search → book → confirm)
-  - Payment processing
-  - Calendar synchronization
-  - User authentication and authorization
-  - Email/SMS notifications
-- Minimum 80% code coverage for business logic
-- All critical paths must have end-to-end tests
+- **Homepage**: Welcome message, property highlights, quick links to key info
+- **Property Information**: House rules, WiFi, parking, trash, check-in/out
+- **Rooms**: Bedroom and bathroom details organized by room
+- **Kitchen & Appliances**: Inventory, locations, instructions
+- **Amenities**: Pool, hot tub, game room, outdoor spaces, equipment
+- **Local Area**: Restaurants, activities, shopping, emergency contacts
+- **Housekeeping**: Cleaning supplies, laundry, maintenance contacts
 
-**Rationale**: Bugs in rental management systems (double bookings, payment failures, lost reservations) have immediate, severe consequences. TDD ensures reliability before code reaches production.
+### Content Presentation
 
-### VI. Observability & Maintainability
+- Use icons and visual indicators for quick scanning
+- Group related information together
+- Use collapsible sections for lengthy content
+- Include photos for visual reference (appliances, locations, views)
+- Highlight emergency and critical information
+- Use consistent formatting throughout
 
-All systems MUST be observable, debuggable, and maintainable:
+### Accessibility
 
-- Structured logging for all operations (JSON format)
-- Distributed tracing for multi-service operations
-- Metrics for business operations (bookings, revenue, occupancy)
-- Error tracking with context and stack traces
-- Performance monitoring (response times, database queries)
-- Documentation required for all APIs and integrations
-- Code must be self-documenting with clear naming
+- WCAG 2.1 AA compliance minimum
+- High contrast text for readability
+- Alt text for all images
+- Keyboard navigation support
+- Screen reader friendly
 
-**Rationale**: Short-term rental platforms operate 24/7 with real-time bookings. Issues must be identified and resolved quickly to prevent revenue loss and guest dissatisfaction.
+## Technical Constraints
 
-## Technology Constraints
+### Technology Stack
 
-### Platform Requirements
-
-- **API-First Architecture**: All functionality must be accessible via REST APIs
-- **Database**: PostgreSQL or similar ACID-compliant relational database for transactional data
-- **Payment Processing**: Use certified payment gateway (Stripe, Square, or similar) - never handle raw payment data
-- **Calendar Integration**: Support iCal format for external calendar synchronization (Airbnb, VRBO, etc.)
-- **Notification System**: Email and SMS notification capabilities with delivery tracking
+- **Frontend**: Modern, mobile-responsive framework (React, Vue, or similar)
+- **Content Management**: Simple CMS or structured data files (JSON, Markdown)
+- **Hosting**: Fast, reliable hosting with SSL certificate
+- **Images**: Optimized and compressed, with lazy loading
+- **Search**: Client-side search for instant results (Fuse.js or similar)
 
 ### Performance Standards
 
-- Page load time: < 2 seconds for 95th percentile
-- API response time: < 500ms for 95th percentile
-- Booking search results: < 1 second for up to 1000 properties
-- Support for 100 concurrent booking transactions
-- 99.9% uptime SLA during peak booking seasons
+- Page load time: < 2 seconds on 3G mobile connection
+- First Contentful Paint: < 1.5 seconds
+- Time to Interactive: < 3 seconds
+- Images: WebP format with fallbacks, max 200KB per image
+- Bundle size: < 500KB total for initial load
 
-### Scalability Considerations
+### Optional Enhancements
 
-- Horizontal scaling capability for application tier
-- Database read replicas for reporting queries
-- Caching layer for frequently accessed data (property details, availability)
-- Asynchronous processing for non-critical operations (emails, analytics)
+- **Password Protection**: Optional simple password for guest-only access
+- **QR Code**: Generate QR code for easy access from printed card
+- **Offline Mode**: Service worker for offline access
+- **Print-Friendly**: CSS for clean printing if guests want hard copy
+- **Dark Mode**: Optional dark theme for night reading
 
 ## Development Workflow
 
 ### Feature Development Process
 
-1. **Specification**: Create detailed spec using `/speckit.specify` (requirements, user stories, success criteria)
-2. **Planning**: Generate technical plan using `/speckit.plan` (architecture, tech stack decisions, data models)
-3. **Task Breakdown**: Create actionable tasks using `/speckit.tasks`
-4. **Test Creation**: Write tests first, get approval before implementation
-5. **Implementation**: Execute using `/speckit.implement`
-6. **Review**: Code review with constitution compliance check
-7. **Deploy**: Staged deployment (dev → staging → production)
+1. **Specification**: Define what content/features to add using `/speckit.specify`
+2. **Planning**: Create technical plan using `/speckit.plan`
+3. **Task Breakdown**: Break into actionable tasks using `/speckit.tasks`
+4. **Implementation**: Build the feature using `/speckit.implement`
+5. **Review**: Verify design, usability, and mobile experience
+6. **Test**: Test on actual mobile devices (iOS and Android)
+7. **Deploy**: Push changes to production
 
 ### Quality Gates
 
-Before any feature can be merged:
+Before any feature can be deployed:
 
-- [ ] All tests passing (unit, integration, e2e)
-- [ ] Code coverage ≥ 80% for business logic
-- [ ] Security review completed (for authentication, payment, or data access features)
-- [ ] Compliance check passed (for features touching bookings, payments, or guest data)
-- [ ] Performance benchmarks met
-- [ ] Documentation updated (API docs, user guides)
-- [ ] Constitution principles verified
+- [ ] Works perfectly on mobile devices (iPhone and Android)
+- [ ] Loads quickly on 3G mobile connection
+- [ ] Content is clear and easy to understand
+- [ ] Navigation is intuitive (no user confusion)
+- [ ] Images are optimized and load fast
+- [ ] Guest can find information in 2 clicks or less
+- [ ] Tested by someone unfamiliar with the property
+- [ ] No broken links or missing information
 
-### Code Review Requirements
+### Testing Requirements
 
-All changes require:
+- **Device Testing**: Test on actual phones and tablets, not just browser responsive mode
+- **User Testing**: Have someone unfamiliar with property find specific information
+- **Performance Testing**: Verify load times on slow connections
+- **Content Review**: Property owner approves all content for accuracy
+- **Cross-browser**: Works in Safari (iOS), Chrome (Android), and major desktop browsers
 
-- Minimum 1 peer review
-- Automated linting and formatting checks passed
-- No introduction of known security vulnerabilities (dependency scanning)
-- Verification of constitution principle compliance
-- For critical features (booking, payment): Minimum 2 reviewers including senior developer
+## Content Standards
+
+### Writing Style
+
+- **Friendly & Welcoming**: Warm tone as if talking to a friend
+- **Concise**: Get to the point quickly, respect guest's time
+- **Action-Oriented**: Tell guests what to do, not just what exists
+- **Anticipatory**: Answer questions before they're asked
+
+### Required Information Sections
+
+Based on the guidebook questionnaire, these sections are required:
+
+1. **Property Basics**: Address, capacity, WiFi, security cameras, house rules
+2. **Check-In/Out**: Procedures, times, parking, trash collection
+3. **Bedrooms**: Per-room details (location, bed sizes, amenities, linens)
+4. **Bathrooms**: Per-bathroom details (supplies, amenities)
+5. **Kitchen**: Appliances, inventory, locations of items
+6. **Amenities**: Pool, hot tub, game room, outdoor spaces, equipment available
+7. **Housekeeping**: Cleaning supplies locations, laundry, maintenance contacts
+8. **Local Recommendations**: Restaurants, activities, shopping, attractions
+9. **Emergency Info**: Contacts, nearest hospital, property manager
+
+### Content Accuracy
+
+- All information must be current and accurate
+- WiFi passwords, lock codes updated immediately if changed
+- Local business hours verified within last 3 months
+- Photos reflect current state of property
+- Outdated information removed or marked as "call to verify"
 
 ## Governance
 
 ### Constitutional Authority
 
-This constitution supersedes all other development practices and guidelines. In case of conflict between this constitution and any other guidance, the constitution takes precedence.
+This constitution guides all development decisions for the guidebook website. When in doubt, prioritize: **Guest Experience > Content Clarity > Mobile Experience > Easy Updates**
 
 ### Amendment Process
 
-Amendments to this constitution require:
+Constitution changes require:
 
-1. Written proposal with rationale
-2. Impact analysis on existing codebase
-3. Team consensus (unanimous for core principles, majority for other sections)
-4. Version bump following semantic versioning:
-   - **MAJOR**: Removal or incompatible changes to core principles
-   - **MINOR**: New principles or sections added
-   - **PATCH**: Clarifications, typo fixes, non-semantic changes
-5. Documentation of changes in Sync Impact Report
-6. Migration plan for existing code (if applicable)
+1. Written rationale for change
+2. Version bump (MAJOR for principle changes, MINOR for additions, PATCH for clarifications)
+3. Update of this Sync Impact Report
+4. Review of existing features for compatibility
 
-### Compliance Verification
+### Simplicity Commitment
 
-- All pull requests must include a constitutional compliance checklist
-- Any deviation from principles must be explicitly justified and documented
-- Complexity must always be justified against simpler alternatives
-- When in doubt, consult this constitution before making architectural decisions
+This project intentionally avoids:
 
-### Guidance Integration
+- Complex authentication systems
+- Payment processing
+- Booking/reservation functionality
+- Multi-property management
+- Guest data collection beyond basic analytics
+- Social features or guest-to-guest communication
 
-For AI agents working on this codebase:
+**If a feature doesn't directly help guests use the property or find local information, it's out of scope.**
 
-- Always reference this constitution when making design decisions
-- Use `.cursorrules` file for runtime development guidance
-- Document any assumed interpretations of principles
-- Flag ambiguities for human review rather than making assumptions
-
-**Version**: 1.0.0 | **Ratified**: 2025-11-16 | **Last Amended**: 2025-11-16
+**Version**: 2.0.0 | **Ratified**: 2025-11-16 | **Last Amended**: 2025-11-16
