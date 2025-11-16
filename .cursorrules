@@ -1,0 +1,64 @@
+# Texas Short-Term Rental - Cursor Agent Context
+
+## Project Overview
+
+This project uses **Spec-Driven Development** methodology with the GitHub Spec Kit toolkit.
+
+## Available Commands
+
+Use these commands when working on features:
+
+- `/speckit.constitution` - Define or update project principles and development guidelines
+- `/speckit.specify [description]` - Create a new feature specification from a description
+- `/speckit.clarify` - Clarify specification requirements  
+- `/speckit.plan` - Create a technical implementation plan for a specification
+- `/speckit.tasks` - Generate a detailed task breakdown from the implementation plan
+- `/speckit.implement` - Execute the implementation plan
+- `/speckit.analyze` - Analyze codebase and documentation
+- `/speckit.checklist` - Generate quality checklists
+
+## Project Structure
+
+```
+texas-shortterm-rental/
+├── memory/
+│   └── constitution.md         # Project principles and guidelines
+├── specs/
+│   └── NNN-feature-name/      # Feature specifications (numbered)
+│       ├── spec.md            # What to build (requirements)
+│       ├── plan.md            # How to build it (technical plan)
+│       ├── tasks.md           # Task breakdown for implementation
+│       └── research.md        # Technical research notes
+├── templates/                  # Spec-kit templates
+│   ├── commands/              # Command definitions
+│   ├── spec-template.md
+│   ├── plan-template.md
+│   └── tasks-template.md
+└── scripts/                    # Helper scripts
+    ├── bash/                  # Shell scripts
+    └── powershell/            # PowerShell scripts
+
+```
+
+## Workflow
+
+1. **Constitution First**: Define project principles with `/speckit.constitution`
+2. **Specify Features**: Use `/speckit.specify` to describe what you want to build
+3. **Plan Implementation**: Use `/speckit.plan` to create technical plans
+4. **Break Down Tasks**: Use `/speckit.tasks` for detailed task lists
+5. **Implement**: Use `/speckit.implement` to execute the plan
+
+## Development Guidelines
+
+- Focus on **what** to build (requirements) before **how** to build it (implementation)
+- All features start with a specification
+- Specifications are technology-agnostic
+- Plans contain technical decisions and architecture
+- Tasks break down plans into executable steps
+
+## Current State
+
+Project initialized and ready for constitution definition.
+
+**Next Step**: Run `/speckit.constitution` to define your project's guiding principles.
+
