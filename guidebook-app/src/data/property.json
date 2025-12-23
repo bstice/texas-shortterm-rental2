@@ -1,0 +1,19 @@
+{
+  "property": {
+    "address": "9926 Ledgestone Ter",
+    "city": "Austin",
+    "state": "TX",
+    "zip": "78737",
+    "size": {
+      "bedrooms": 5,
+      "bathrooms": 5,
+      "squareFeet": 2738,
+      "acres": 8.4
+    },
+    "location": {
+      "distanceToDowntown": "20 minutes",
+      "minutes": 20
+    }
+  }
+}
+

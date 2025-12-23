@@ -86,6 +86,12 @@ Execute the implementation:
 - [Quick Start Guide](https://github.github.com/spec-kit/quickstart.html)
 - [Spec-Driven Development Guide](https://github.github.com/spec-kit/index.html)
 
+## Feature Specifications
+
+- **001-guidebook-website**: Main guidebook website specification (completed)
+- **002-ai-chatbot**: AI chatbot feature specification (completed)
+- **003-pdf-export**: Downloadable PDF guidebook feature specification (new)
+
 ## License
 
 [Your License Here]

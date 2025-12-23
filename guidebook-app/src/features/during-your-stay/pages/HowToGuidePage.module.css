@@ -1,0 +1,154 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.icon {
+  color: var(--color-primary);
+}
+
+.container h2 {
+  font-size: 1.75rem;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.container h3 {
+  font-size: 1.25rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text);
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-light);
+}
+
+.stepsSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.stepsList {
+  list-style: none;
+  counter-reset: step-counter;
+  padding: 0;
+  margin: 0;
+}
+
+.stepsList li {
+  counter-increment: step-counter;
+  padding: var(--spacing-lg) 0;
+  padding-left: var(--spacing-2xl);
+  position: relative;
+  margin-bottom: var(--spacing-md);
+  border-bottom: 1px solid var(--color-surface);
+}
+
+.stepsList li:last-child {
+  border-bottom: none;
+}
+
+.stepsList li::before {
+  content: counter(step-counter);
+  position: absolute;
+  left: 0;
+  top: var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.safetySection {
+  margin-bottom: var(--spacing-xl);
+  padding: var(--spacing-lg);
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  border-radius: 4px;
+}
+
+.safetyIcon {
+  color: #856404;
+}
+
+.safetyList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.safetyList li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.safetyList li::before {
+  content: '⚠';
+  position: absolute;
+  left: 0;
+  color: #856404;
+  font-weight: bold;
+}
+
+.troubleshootingSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.troubleshootingList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.troubleshootingList li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.troubleshootingList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .stepsList li {
+    padding-left: var(--spacing-xl);
+  }
+
+  .stepsList li::before {
+    width: 1.75rem;
+    height: 1.75rem;
+    font-size: 0.875rem;
+  }
+}
+

@@ -1,0 +1,30 @@
+{
+  "addressParking": {
+    "address": "9926 Ledgestone Ter, Austin, TX 78737",
+    "parking": [
+      "Parking is available in the driveway",
+      "Please park in designated areas only",
+      "Do not block the entrance or exit"
+    ],
+    "directions": "From downtown Austin, take Highway 290 West for approximately 20 minutes. Turn onto Ledgestone Ter and the property will be on your right."
+  },
+  "checkIn": {
+    "steps": [
+      "Arrive at the property at your scheduled check-in time",
+      "Use the smart lock code provided in your confirmation email",
+      "Enter the code on the keypad to unlock the door",
+      "Once inside, locate the welcome packet on the kitchen counter"
+    ],
+    "arrivalExpectations": "The property will be clean and ready for your arrival. All amenities are fully functional and ready to use."
+  },
+  "smartLock": {
+    "code": "1234",
+    "instructions": "Enter the 4-digit code on the smart lock keypad located on the front door. The lock will beep and the door will unlock.",
+    "troubleshooting": [
+      "If the code doesn't work, try entering it again slowly",
+      "Make sure you're pressing each number firmly",
+      "If issues persist, contact the host immediately"
+    ]
+  }
+}
+

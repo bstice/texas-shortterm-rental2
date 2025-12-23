@@ -1,0 +1,193 @@
+{
+  "wifi": {
+    "ssid": "GuestNetwork",
+    "password": "Welcome2025",
+    "instructions": "Connect to the 'GuestNetwork' WiFi network using the password provided. The network is available throughout the property.",
+    "troubleshooting": [
+      "If you can't find the network, try refreshing your device's WiFi list",
+      "Make sure you're entering the password correctly (case-sensitive)",
+      "If issues persist, try restarting your device's WiFi connection"
+    ]
+  },
+  "houseRules": {
+    "rules": [
+      "No smoking inside the property",
+      "No parties or events without prior approval",
+      "Respect quiet hours from 10 PM to 7 AM",
+      "Keep the property clean and tidy",
+      "Report any damages or issues immediately"
+    ],
+    "quietHours": "10 PM to 7 AM",
+    "guestCapacity": 10,
+    "smokingPolicy": "Smoking is not allowed inside the property. Smoking is permitted in designated outdoor areas only.",
+    "outdoorGuidelines": [
+      "Respect the natural surroundings",
+      "Do not disturb wildlife",
+      "Follow fire safety guidelines when using outdoor fire features",
+      "Keep outdoor areas clean"
+    ]
+  },
+  "propertyFeatures": {
+    "indoor": {
+      "content": "The home features 5 bedrooms and 5 bathrooms spread across 2,738 square feet. The interior is filled with natural light and offers a warm, comfortable layout perfect for family life, entertaining, or quiet retreat.",
+      "highlights": [
+        "Fully furnished with modern amenities",
+        "Natural light throughout",
+        "Comfortable living spaces",
+        "Well-equipped kitchen"
+      ]
+    },
+    "outdoor": {
+      "content": "Set on 8.4 peaceful acres, the property offers wide-open skies, mature trees, and an abundance of natural surroundings that create a tranquil setting. There's plenty of room to spread out, whether you envision walking trails, a garden, or simply relaxing on the porch while taking in the Hill Country sunsets.",
+      "highlights": [
+        "8.4 acres of private land",
+        "Mature trees and natural surroundings",
+        "Walking trails",
+        "Porch with sunset views"
+      ]
+    },
+    "pool": {
+      "content": "The property features a beautiful pool perfect for cooling off during hot Texas days. The pool area includes comfortable seating and is surrounded by the natural beauty of the Hill Country.",
+      "location": "The pool is located in the backyard area, easily accessible from the main house.",
+      "features": [
+        "Pool with comfortable seating area",
+        "Surrounded by natural landscape",
+        "Perfect for relaxation and recreation"
+      ]
+    },
+    "limo": {
+      "content": "A limo is included with the property rental. Please see the how-to guide for details on accessing and using the limo.",
+      "access": "The limo is parked on the property. Keys and access instructions are provided in the welcome packet.",
+      "guidelines": [
+        "Use the limo responsibly",
+        "Return the limo in the same condition",
+        "Follow all traffic laws",
+        "Contact host if any issues arise"
+      ]
+    }
+  },
+  "whatsIncluded": {
+    "furniture": [
+      "Living room furniture",
+      "Dining room set",
+      "Bedroom furniture",
+      "Outdoor furniture"
+    ],
+    "kitchen": [
+      "Fully equipped kitchen",
+      "Dishes and utensils",
+      "Cookware",
+      "Coffee maker",
+      "Microwave",
+      "Refrigerator"
+    ],
+    "linens": [
+      "Bed sheets and pillows",
+      "Towels",
+      "Bathroom essentials"
+    ],
+    "entertainment": [
+      "TV with streaming capabilities",
+      "WiFi internet",
+      "Board games"
+    ],
+    "outdoor": [
+      "Pool access",
+      "Outdoor seating",
+      "Fire features"
+    ],
+    "limo": "Limo included with rental",
+    "guestsNeedToBring": [
+      "Personal toiletries",
+      "Food and beverages",
+      "Beach towels for pool use"
+    ]
+  },
+  "sunsets": {
+    "locations": [
+      "Front porch",
+      "Back deck",
+      "Pool area",
+      "Walking trails"
+    ],
+    "bestTimes": "Evening hours, approximately 30 minutes before sunset",
+    "tips": "The Hill Country sunsets are spectacular. Find a comfortable spot on the porch or deck, bring a camera, and enjoy the natural beauty.",
+    "photography": "The property offers excellent photography opportunities, especially during golden hour. The wide-open skies and natural landscape create stunning backdrops."
+  },
+  "howToGuides": [
+    {
+      "id": "ac-heating",
+      "title": "A/C & Heating",
+      "category": "ac",
+      "steps": [
+        {
+          "title": "Locate the thermostat",
+          "description": "The thermostat is located in the main living area on the wall."
+        },
+        {
+          "title": "Adjust temperature",
+          "description": "Use the up/down arrows to set your desired temperature. The system will automatically maintain this temperature."
+        },
+        {
+          "title": "Set mode",
+          "description": "Select 'Cool' for air conditioning or 'Heat' for heating. The 'Auto' mode will automatically switch between cooling and heating as needed."
+        }
+      ],
+      "troubleshooting": [
+        "If the system doesn't turn on, check that the thermostat is set correctly",
+        "If the temperature doesn't change, wait a few minutes for the system to respond",
+        "If issues persist, contact the host"
+      ]
+    },
+    {
+      "id": "pool",
+      "title": "Pool",
+      "category": "pool",
+      "steps": [
+        {
+          "title": "Pool access",
+          "description": "The pool is located in the backyard and is accessible from the main house."
+        },
+        {
+          "title": "Pool safety",
+          "description": "Please follow all pool safety guidelines. Children should be supervised at all times."
+        },
+        {
+          "title": "Pool maintenance",
+          "description": "The pool is maintained regularly. If you notice any issues, please contact the host immediately."
+        }
+      ],
+      "safety": [
+        "Never swim alone",
+        "Supervise children at all times",
+        "No diving in shallow areas",
+        "Follow all posted safety guidelines"
+      ]
+    },
+    {
+      "id": "limo",
+      "title": "Limo",
+      "category": "limo",
+      "steps": [
+        {
+          "title": "Locate the limo",
+          "description": "The limo is parked on the property. Keys and access instructions are in the welcome packet."
+        },
+        {
+          "title": "Check the limo",
+          "description": "Before using, check that the limo is in good condition and has fuel."
+        },
+        {
+          "title": "Use responsibly",
+          "description": "Use the limo responsibly and follow all traffic laws. Return it in the same condition."
+        }
+      ],
+      "troubleshooting": [
+        "If the limo doesn't start, check the battery and fuel levels",
+        "If you notice any issues, contact the host immediately",
+        "In case of emergency, use the provided emergency contact information"
+      ]
+    }
+  ]
+}
+

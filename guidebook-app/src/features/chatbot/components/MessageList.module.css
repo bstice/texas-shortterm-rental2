@@ -1,0 +1,40 @@
+.container {
+  padding: var(--spacing-lg);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+  min-height: 100%; /* Ensure it takes full height of parent */
+}
+
+.welcome {
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-lg);
+  border: 1px solid var(--color-border);
+}
+
+.welcomeText {
+  margin: 0;
+  color: var(--color-text);
+  line-height: 1.6;
+}
+
+/* Scrollbar styling */
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.container::-webkit-scrollbar-track {
+  background: var(--color-background);
+}
+
+.container::-webkit-scrollbar-thumb {
+  background: var(--color-border);
+  border-radius: 4px;
+}
+
+.container::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-light);
+}
+

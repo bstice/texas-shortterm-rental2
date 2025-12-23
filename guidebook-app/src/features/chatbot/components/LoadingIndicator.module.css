@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: var(--spacing-md);
+  color: var(--color-text-light);
+}
+
+.icon {
+  animation: spin 1s linear infinite;
+  color: var(--color-primary);
+}
+
+.text {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+

@@ -1,0 +1,122 @@
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-xl);
+  color: var(--color-primary);
+}
+
+.container h2 {
+  font-size: 1.75rem;
+  margin-top: var(--spacing-xl);
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text);
+}
+
+.loading,
+.error {
+  text-align: center;
+  padding: var(--spacing-2xl);
+  color: var(--color-text-light);
+}
+
+.codeSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.codeBox {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface);
+  border-radius: 8px;
+  margin-bottom: var(--spacing-md);
+}
+
+.code {
+  flex: 1;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-family: 'Courier New', monospace;
+  margin: 0;
+  color: var(--color-primary);
+  letter-spacing: 0.1em;
+}
+
+.copyButton {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-sm) var(--spacing-md);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.copyButton:hover {
+  background-color: var(--color-secondary);
+}
+
+.copyButton:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.instructionsSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.troubleshootingSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.troubleshootingList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.troubleshootingList li {
+  padding: var(--spacing-sm) 0;
+  padding-left: var(--spacing-lg);
+  position: relative;
+}
+
+.troubleshootingList li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+@media (max-width: 767px) {
+  .container h1 {
+    font-size: 2rem;
+  }
+
+  .codeBox {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .code {
+    font-size: 1.25rem;
+    text-align: center;
+  }
+
+  .copyButton {
+    width: 100%;
+    justify-content: center;
+  }
+}
+

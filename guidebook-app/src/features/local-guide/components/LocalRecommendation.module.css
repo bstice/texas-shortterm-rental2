@@ -1,0 +1,181 @@
+.card {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.imageContainer {
+  width: 100%;
+  height: 200px;
+  overflow: hidden;
+  background-color: var(--color-background);
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: var(--spacing-md);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+  flex-grow: 1;
+}
+
+.cardContent h3 {
+  margin: 0;
+  font-size: var(--font-size-lg);
+  color: var(--color-text);
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+}
+
+.detail {
+  display: block;
+  font-size: var(--font-size-sm);
+  color: var(--color-text-light);
+  line-height: 1.5;
+}
+
+.detail strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+.phoneLink {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.phoneLink:hover {
+  color: var(--color-secondary);
+  text-decoration: underline;
+}
+
+.websiteLink {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  margin-top: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border: 1px solid var(--color-primary);
+  border-radius: 4px;
+  transition: all 0.2s ease;
+  width: fit-content;
+}
+
+.websiteLink:hover {
+  background-color: var(--color-primary);
+  color: white;
+  text-decoration: none;
+}
+
+.websiteLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+.externalIcon {
+  flex-shrink: 0;
+}
+
+.socialLinks {
+  display: flex;
+  gap: var(--spacing-xs);
+  margin-top: var(--spacing-sm);
+  flex-wrap: wrap;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background-color: var(--color-background);
+  border: 1px solid var(--color-border);
+  color: var(--color-text);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.socialLink:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+/* Platform-specific colors on hover */
+.socialLink[title="Facebook"]:hover {
+  background-color: #1877f2;
+  border-color: #1877f2;
+}
+
+.socialLink[title="Instagram"]:hover {
+  background-color: #e4405f;
+  border-color: #e4405f;
+}
+
+.socialLink[title="Twitter/X"]:hover {
+  background-color: #1da1f2;
+  border-color: #1da1f2;
+}
+
+.socialLink[title="Yelp"]:hover {
+  background-color: #d32323;
+  border-color: #d32323;
+}
+
+.socialLink[title="TripAdvisor"]:hover {
+  background-color: #00af87;
+  border-color: #00af87;
+}
+
+@media (max-width: 767px) {
+  .imageContainer {
+    height: 150px;
+  }
+
+  .cardContent {
+    padding: var(--spacing-sm);
+  }
+
+  .cardContent h3 {
+    font-size: var(--font-size-md);
+  }
+
+  .socialLink {
+    width: 32px;
+    height: 32px;
+  }
+}
+

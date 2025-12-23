@@ -1,222 +1,306 @@
-<!--
-Sync Impact Report:
-- Version: 2.0.0 (Major revision - scope change)
-- Previous version was over-engineered for multi-property booking platform
-- Updated to reflect single-property guest guidebook website
-- Removed: Payment processing, booking systems, complex security, multi-tenancy
-- Added: Content-first principles, mobile-first design, guest experience focus
-- Simplified from 6 to 4 core principles
-- Templates: ✅ All templates reviewed and compatible
--->
+# Project Constitution
 
-# Texas Short-Term Rental Guidebook Constitution
+## Project Overview
 
-## Project Scope
+**Project Name**: Texas Short-Term Rental
 
-This is a **single-property digital guidebook website** for short-term rental guests. The guidebook provides comprehensive property information, local recommendations, and helpful resources to enhance the guest experience during their stay.
+**Purpose**: Build a digital guidebook website for short-term rental guests, providing essential information about the property, local area, and stay experience. The website will help guests navigate their stay from arrival to checkout with clear, organized information.
 
 ## Core Principles
 
-### I. Content Clarity First
+### 1. Development Philosophy
+- **Spec-Driven Development**: All features start with detailed specifications before implementation
+- **Intent-First**: Define what to build before how to build it
+- **Iterative Refinement**: Specifications and plans evolve through clarification and feedback
 
-All information MUST be clear, accurate, and easy for guests to understand:
+### 2. Technical Standards
 
-- Information organized by logical categories (property details, local recommendations, emergency contacts)
-- Plain language - no jargon or complex terminology
-- Key information accessible within 2 clicks from homepage
-- Search functionality to quickly find specific items (e.g., "WiFi password", "coffee maker")
-- Content must be scannable with clear headings and bullet points
-- All room-specific information clearly labeled by room name/number
-- Emergency information prominently displayed and easy to find
+#### React Framework Standards
+- **React Version**: Use React 19+ with modern features and patterns
+- **Component Architecture**: 
+  - Prefer functional components with hooks over class components
+  - Use React Server Components where applicable for better performance
+  - Implement component composition over inheritance
+  - Keep components small, focused, and single-responsibility
+- **Hooks Best Practices**:
+  - Use custom hooks to extract reusable logic
+  - Follow Rules of Hooks (only call hooks at the top level)
+  - Use `useMemo` and `useCallback` judiciously (prefer React Compiler for automatic optimization)
+  - Leverage React Compiler 1.0+ for automatic memoization when available
+- **State Management**:
+  - Use local state (`useState`) for component-specific state
+  - Use Context API for shared state that doesn't require complex updates
+  - Consider state management libraries (Zustand, Jotai) for complex global state
+  - Avoid prop drilling beyond 2-3 levels
 
-**Rationale**: Guests arrive tired, may be in a hurry, or dealing with issues (broken appliance, can't find supplies). Information must be immediately accessible and understandable.
+#### TypeScript Integration
+- **Type Safety**: Use TypeScript for all new code
+- **Type Definitions**: 
+  - Define proper types/interfaces for all props, state, and data structures
+  - Avoid `any` type; use `unknown` when type is truly unknown
+  - Leverage TypeScript's improved type inference
+- **Type-Safe Hooks**: Use typed hooks and ensure proper return types
 
-### II. Mobile-First Design (NON-NEGOTIABLE)
+#### Code Style & Quality
+- **Code Formatting**: 
+  - Use Prettier for consistent code formatting
+  - Use ESLint with React-specific rules (eslint-plugin-react, eslint-plugin-react-hooks)
+  - Enforce consistent naming conventions (PascalCase for components, camelCase for functions/variables)
+- **File Organization**:
+  - One component per file
+  - Co-locate related files (component, styles, tests, types) when appropriate
+  - Use index files for clean imports
+- **Code Conventions**:
+  - Use descriptive, meaningful variable and function names
+  - Extract magic numbers and strings into constants
+  - Keep functions pure when possible
+  - Use early returns to reduce nesting
 
-The guidebook MUST work beautifully on mobile devices as this is how 90%+ of guests will access it:
+#### Performance Standards
+- **Rendering Optimization**:
+  - Leverage React Compiler for automatic memoization
+  - Use `React.memo` for expensive components when compiler isn't available
+  - Implement code splitting with `React.lazy()` and `Suspense`
+  - Optimize images and assets for web delivery
+- **Bundle Size**: 
+  - Keep initial bundle size under 200KB (gzipped)
+  - Use dynamic imports for route-based code splitting
+  - Tree-shake unused code
+- **Performance Targets**:
+  - First Contentful Paint (FCP) < 1.8s
+  - Largest Contentful Paint (LCP) < 2.5s
+  - Time to Interactive (TTI) < 3.8s
 
-- Responsive design that adapts to phone, tablet, and desktop
-- Touch-friendly navigation with large tap targets
-- Fast loading times (< 2 seconds on mobile network)
-- Readable text without zooming (minimum 16px font size)
-- Images optimized for mobile (compressed but high quality)
-- Offline-capable or cached for areas with poor signal
-- No horizontal scrolling required
+#### Testing Requirements
+- **Testing Stack**:
+  - Jest for unit testing and test runner
+  - React Testing Library for component testing
+  - Playwright or Cypress for end-to-end testing
+- **Testing Standards**:
+  - Write tests for all business logic and user interactions
+  - Test user behavior, not implementation details
+  - Maintain minimum 80% code coverage for critical paths
+  - Write tests before fixing bugs (test-driven bug fixing)
+- **Component Testing**:
+  - Test components in isolation
+  - Use accessible queries (getByRole, getByLabelText)
+  - Mock external dependencies and API calls
 
-**Rationale**: Guests will primarily access the guidebook on their phones while standing in the kitchen, looking at an appliance, or exploring the area. Desktop optimization is secondary.
+#### Accessibility (a11y)
+- **WCAG Compliance**: Follow WCAG 2.1 Level AA guidelines
+- **Semantic HTML**: Use semantic HTML elements appropriately
+- **ARIA**: Use ARIA roles and labels when semantic HTML isn't sufficient
+- **Keyboard Navigation**: Ensure all interactive elements are keyboard accessible
+- **Screen Readers**: Test with screen readers and ensure proper announcements
+- **Focus Management**: Implement visible focus indicators and logical tab order
 
-### III. Guest Experience Excellence
+#### Styling Standards
+- **CSS Approach**: 
+  - Use CSS Modules, styled-components, or Tailwind CSS for scoped styles
+  - Avoid inline styles for complex styling
+  - Use CSS custom properties (variables) for theming
+- **Responsive Design**:
+  - Mobile-first approach
+  - Test on multiple device sizes
+  - Use relative units (rem, em, %) over fixed pixels where appropriate
 
-The guidebook MUST enhance the guest experience and reduce host inquiries:
+#### Assets & Media Standards
+- **Image Strategy**:
+  - Use high-quality, beautiful photos throughout the application
+  - Optimize all images for web (WebP format preferred, with fallbacks)
+  - Implement responsive images with `srcset` for different screen sizes
+  - Use lazy loading for images below the fold
+  - Maintain aspect ratios to prevent layout shift
+- **Development Placeholders**:
+  - Use placeholder images/services during development:
+    - Unsplash API or similar for beautiful placeholder photos
+    - Placeholder.com or placeholder image generators
+    - Maintain same aspect ratios as final images
+  - Create a consistent placeholder system that matches final image dimensions
+  - Document placeholder-to-final-image mapping for easy replacement
+- **Image Organization**:
+  - Organize images in dedicated `assets/images/` or `public/images/` directory
+  - Use descriptive, semantic file names
+  - Group images by section/feature (e.g., `hero/`, `local-guide/`, `property/`)
+- **Image Performance**:
+  - Compress images before committing (use tools like ImageOptim, Squoosh)
+  - Target file sizes: < 200KB for hero images, < 100KB for content images
+  - Use modern formats (WebP, AVIF) with fallbacks (JPEG, PNG)
+  - Consider using Next.js Image component or similar optimized image components
 
-- Answers common questions proactively (WiFi, parking, check-out procedures)
-- Visual aids where helpful (photos of appliances, maps, diagrams)
-- Step-by-step instructions for complex items (smart TV, thermostat, hot tub)
-- Local recommendations with addresses, hours, and phone numbers
-- Tone should be warm, welcoming, and helpful
-- Anticipate guest needs at different times (arrival, during stay, checkout)
-- Reduce need for guests to contact host for basic information
+#### Build & Development Tools
+- **Build Tool**: Use Vite or Next.js for modern build tooling
+- **Package Management**: Use npm, yarn, or pnpm consistently
+- **Development Environment**:
+  - Hot Module Replacement (HMR) for fast development
+  - Source maps for debugging
+  - Environment variables for configuration
+- **Code Quality Tools**:
+  - Pre-commit hooks (Husky) for linting and formatting
+  - Automated dependency updates (Dependabot, Renovate)
 
-**Rationale**: A great guidebook improves guest satisfaction, reduces host interruptions, and leads to better reviews and repeat bookings.
+#### Deployment Standards
+- **Hosting Platform**: Vercel (primary choice for free hosting)
+  - Free tier includes: Automatic HTTPS, global CDN, preview deployments
+  - Zero-config deployment for React applications
+  - Automatic deployments from Git (GitHub, GitLab, Bitbucket)
+  - Environment variables management
+  - Analytics and performance monitoring
+- **Deployment Workflow**:
+  - Automatic deployments on push to main/master branch
+  - Preview deployments for all pull requests
+  - Branch-based deployments for feature testing
+- **Domain & SSL**:
+  - Use Vercel's free SSL certificates
+  - Custom domain support (if needed in future)
+  - Automatic HTTPS redirects
+- **Build Configuration**:
+  - Optimize production builds (minification, tree-shaking)
+  - Set proper build output directory
+  - Configure environment-specific variables
+- **Alternative Options** (if needed):
+  - Netlify (similar free tier with good React support)
+  - GitHub Pages (for static sites)
+  - Cloudflare Pages (free tier with good performance)
 
-### IV. Easy Content Management
+#### Documentation Standards
+- **Component Documentation**: 
+  - Document component props with JSDoc or TypeScript types
+  - Include usage examples for complex components
+  - Document component behavior and edge cases
+- **Code Comments**: 
+  - Comment "why" not "what"
+  - Keep comments up-to-date with code changes
+  - Remove commented-out code before committing
 
-Property information MUST be easy to update without technical knowledge:
+### 3. Quality Guidelines
+- [Add your quality guidelines here, e.g., code review process, documentation standards, etc.]
 
-- Content changes should not require code deployment
-- Updates should be immediately visible to guests
-- Non-technical property owner should be able to edit content
-- Version history or backup of previous content
-- Ability to add/update photos without developer help
-- Changes should be testable before going live
+## Technology Stack
 
-**Rationale**: Property details change frequently (WiFi password, local restaurant hours, new amenities). Updates must be quick and simple to keep information accurate.
+- **Frontend Framework**: React 19+ with TypeScript
+- **Build Tool**: Vite or Next.js (to be determined based on requirements)
+- **Styling**: CSS Modules, styled-components, or Tailwind CSS
+- **Design Inspiration**: WordPress theme "Outdoor Adventure" (https://websitedemos.net/outdoor-adventure-02/)
+- **Testing**: Jest, React Testing Library, Playwright/Cypress
+- **Code Quality**: ESLint, Prettier, TypeScript
+- **Deployment**: Vercel (free tier)
+- **Content Management**: Static content with potential for dynamic updates
 
-## Design & User Experience Standards
+## Architecture Principles
 
-### Navigation Structure
+### 1. Component-Based Architecture
+- **Modular Design**: Build the application using reusable, self-contained components
+- **Single Responsibility**: Each component should have one clear purpose and responsibility
+- **Composition Over Inheritance**: Favor component composition to build complex UIs from simple components
+- **Component Hierarchy**: Organize components in a clear parent-child hierarchy that reflects the UI structure
 
-- **Homepage**: Welcome message, property highlights, quick links to key info
-- **Property Information**: House rules, WiFi, parking, trash, check-in/out
-- **Rooms**: Bedroom and bathroom details organized by room
-- **Kitchen & Appliances**: Inventory, locations, instructions
-- **Amenities**: Pool, hot tub, game room, outdoor spaces, equipment
-- **Local Area**: Restaurants, activities, shopping, emergency contacts
-- **Housekeeping**: Cleaning supplies, laundry, maintenance contacts
+### 2. Declarative Programming
+- **State-Driven UI**: Describe what the UI should look like for a given state, not how to achieve it
+- **Predictable Rendering**: Let React handle the rendering logic based on state changes
+- **Immutable Updates**: Treat state as immutable, creating new objects/arrays rather than mutating existing ones
 
-### Content Presentation
+### 3. Unidirectional Data Flow
+- **Props Down, Events Up**: Data flows down from parent to child via props; events flow up via callbacks
+- **Single Source of Truth**: Maintain state at the appropriate level (local, context, or global store)
+- **Controlled Components**: Use controlled components for form inputs and user interactions
+- **Predictable State Updates**: State changes should be explicit and traceable
 
-- Use icons and visual indicators for quick scanning
-- Group related information together
-- Use collapsible sections for lengthy content
-- Include photos for visual reference (appliances, locations, views)
-- Highlight emergency and critical information
-- Use consistent formatting throughout
+### 4. Separation of Concerns
+- **UI Components**: Focus on presentation and user interaction
+- **Business Logic**: Extract logic into custom hooks, utilities, or services
+- **Data Layer**: Separate data fetching and state management from UI components
+- **Styling**: Keep styles co-located with components or in dedicated style modules
 
-### Accessibility
+### 5. Feature-Based Organization
+- **Feature Modules**: Organize code by features/sections rather than by file type
+  ```
+  src/
+    features/
+      before-you-arrive/
+        components/
+        hooks/
+        types/
+        utils/
+      during-your-stay/
+      local-guide/
+      checkout/
+    shared/
+      components/
+      hooks/
+      utils/
+      types/
+  ```
+- **Shared Resources**: Place reusable components, hooks, and utilities in a `shared/` directory
+- **Co-location**: Keep related files (component, styles, tests, types) close together
 
-- WCAG 2.1 AA compliance minimum
-- High contrast text for readability
-- Alt text for all images
-- Keyboard navigation support
-- Screen reader friendly
+### 6. Custom Hooks Pattern
+- **Logic Extraction**: Extract reusable logic into custom hooks
+- **Hook Naming**: Use `use` prefix for all custom hooks
+- **Single Purpose**: Each hook should handle one specific concern
+- **Composability**: Build complex hooks by composing simpler ones
 
-## Technical Constraints
+### 7. TypeScript-First Architecture
+- **Type Safety**: Leverage TypeScript for compile-time error detection
+- **Interface-Driven**: Define interfaces/types before implementation
+- **Type Inference**: Use TypeScript's inference where appropriate, explicit types where needed
+- **Generic Components**: Use generics for reusable, type-safe components
 
-### Technology Stack
+### 8. Performance-First Design
+- **Code Splitting**: Implement route-based and component-based code splitting
+- **Lazy Loading**: Load components and assets on-demand
+- **Memoization**: Use React Compiler or manual memoization for expensive computations
+- **Optimistic Updates**: Provide immediate feedback while async operations complete
 
-- **Frontend**: Modern, mobile-responsive framework (React, Vue, or similar)
-- **Content Management**: Simple CMS or structured data files (JSON, Markdown)
-- **Hosting**: Fast, reliable hosting with SSL certificate
-- **Images**: Optimized and compressed, with lazy loading
-- **Search**: Client-side search for instant results (Fuse.js or similar)
+### 9. Progressive Enhancement
+- **Core Functionality First**: Ensure core features work without JavaScript
+- **Enhanced Experience**: Add interactive features as enhancements
+- **Graceful Degradation**: Handle missing features or API failures gracefully
+- **Accessibility Baseline**: Ensure accessibility regardless of JavaScript state
 
-### Performance Standards
+### 10. Server-Side Considerations (if using Next.js)
+- **Server Components**: Use React Server Components for static content when applicable
+- **Static Generation**: Prefer static generation for content that doesn't change frequently
+- **Incremental Static Regeneration**: Use ISR for content that updates periodically
+- **API Routes**: Use API routes or serverless functions for dynamic server-side logic
 
-- Page load time: < 2 seconds on 3G mobile connection
-- First Contentful Paint: < 1.5 seconds
-- Time to Interactive: < 3 seconds
-- Images: WebP format with fallbacks, max 200KB per image
-- Bundle size: < 500KB total for initial load
+### 11. Vercel-Optimized Architecture
+- **Static-First**: Design for static site generation where possible
+- **Edge Functions**: Consider edge functions for lightweight serverless logic
+- **CDN Optimization**: Structure assets to leverage Vercel's global CDN
+- **Environment Configuration**: Use environment variables for configuration, not hardcoded values
 
-### Optional Enhancements
+### 12. Testing Architecture
+- **Testable Design**: Write components and functions that are easy to test
+- **Isolation**: Components should be testable in isolation
+- **Mock Boundaries**: Define clear boundaries for mocking external dependencies
+- **Test Organization**: Mirror source structure in test directories
 
-- **Password Protection**: Optional simple password for guest-only access
-- **QR Code**: Generate QR code for easy access from printed card
-- **Offline Mode**: Service worker for offline access
-- **Print-Friendly**: CSS for clean printing if guests want hard copy
-- **Dark Mode**: Optional dark theme for night reading
+### 13. Scalability Principles
+- **Horizontal Scalability**: Design for easy addition of new features/sections
+- **Maintainability**: Write code that future developers can understand and modify
+- **Documentation**: Document architectural decisions and patterns
+- **Refactoring-Friendly**: Structure code to allow safe refactoring
+
+### 14. Error Handling & Resilience
+- **Error Boundaries**: Implement React Error Boundaries for graceful error handling
+- **Fallback UI**: Provide meaningful fallback UI for error states
+- **User Feedback**: Communicate errors and loading states clearly to users
+- **Logging**: Implement appropriate logging for debugging and monitoring
 
 ## Development Workflow
 
-### Feature Development Process
+1. **Constitution First**: All development follows these principles
+2. **Specify**: Create detailed feature specifications
+3. **Plan**: Develop technical implementation plans
+4. **Task Breakdown**: Generate actionable task lists
+5. **Implement**: Execute with clear requirements
 
-1. **Specification**: Define what content/features to add using `/speckit.specify`
-2. **Planning**: Create technical plan using `/speckit.plan`
-3. **Task Breakdown**: Break into actionable tasks using `/speckit.tasks`
-4. **Implementation**: Build the feature using `/speckit.implement`
-5. **Review**: Verify design, usability, and mobile experience
-6. **Test**: Test on actual mobile devices (iOS and Android)
-7. **Deploy**: Push changes to production
+## Communication & Collaboration
 
-### Quality Gates
+[Define how team members communicate and collaborate]
 
-Before any feature can be deployed:
+---
 
-- [ ] Works perfectly on mobile devices (iPhone and Android)
-- [ ] Loads quickly on 3G mobile connection
-- [ ] Content is clear and easy to understand
-- [ ] Navigation is intuitive (no user confusion)
-- [ ] Images are optimized and load fast
-- [ ] Guest can find information in 2 clicks or less
-- [ ] Tested by someone unfamiliar with the property
-- [ ] No broken links or missing information
+*This constitution should be updated as the project evolves and new principles emerge.*
 
-### Testing Requirements
-
-- **Device Testing**: Test on actual phones and tablets, not just browser responsive mode
-- **User Testing**: Have someone unfamiliar with property find specific information
-- **Performance Testing**: Verify load times on slow connections
-- **Content Review**: Property owner approves all content for accuracy
-- **Cross-browser**: Works in Safari (iOS), Chrome (Android), and major desktop browsers
-
-## Content Standards
-
-### Writing Style
-
-- **Friendly & Welcoming**: Warm tone as if talking to a friend
-- **Concise**: Get to the point quickly, respect guest's time
-- **Action-Oriented**: Tell guests what to do, not just what exists
-- **Anticipatory**: Answer questions before they're asked
-
-### Required Information Sections
-
-Based on the guidebook questionnaire, these sections are required:
-
-1. **Property Basics**: Address, capacity, WiFi, security cameras, house rules
-2. **Check-In/Out**: Procedures, times, parking, trash collection
-3. **Bedrooms**: Per-room details (location, bed sizes, amenities, linens)
-4. **Bathrooms**: Per-bathroom details (supplies, amenities)
-5. **Kitchen**: Appliances, inventory, locations of items
-6. **Amenities**: Pool, hot tub, game room, outdoor spaces, equipment available
-7. **Housekeeping**: Cleaning supplies locations, laundry, maintenance contacts
-8. **Local Recommendations**: Restaurants, activities, shopping, attractions
-9. **Emergency Info**: Contacts, nearest hospital, property manager
-
-### Content Accuracy
-
-- All information must be current and accurate
-- WiFi passwords, lock codes updated immediately if changed
-- Local business hours verified within last 3 months
-- Photos reflect current state of property
-- Outdated information removed or marked as "call to verify"
-
-## Governance
-
-### Constitutional Authority
-
-This constitution guides all development decisions for the guidebook website. When in doubt, prioritize: **Guest Experience > Content Clarity > Mobile Experience > Easy Updates**
-
-### Amendment Process
-
-Constitution changes require:
-
-1. Written rationale for change
-2. Version bump (MAJOR for principle changes, MINOR for additions, PATCH for clarifications)
-3. Update of this Sync Impact Report
-4. Review of existing features for compatibility
-
-### Simplicity Commitment
-
-This project intentionally avoids:
-
-- Complex authentication systems
-- Payment processing
-- Booking/reservation functionality
-- Multi-property management
-- Guest data collection beyond basic analytics
-- Social features or guest-to-guest communication
-
-**If a feature doesn't directly help guests use the property or find local information, it's out of scope.**
-
-**Version**: 2.0.0 | **Ratified**: 2025-11-16 | **Last Amended**: 2025-11-16

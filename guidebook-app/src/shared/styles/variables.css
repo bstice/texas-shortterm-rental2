@@ -1,0 +1,28 @@
+:root {
+  /* Colors - Nature/outdoor inspired */
+  --color-primary: #2d5016;      /* Deep green */
+  --color-secondary: #6b8e23;    /* Olive green */
+  --color-accent: #8b4513;      /* Earth brown */
+  --color-text: #2c3e50;        /* Dark blue-gray */
+  --color-text-light: #7f8c8d;   /* Light gray */
+  --color-background: #ffffff;
+  --color-surface: #f8f9fa;
+  
+  /* Typography */
+  --font-family-base: system-ui, -apple-system, sans-serif;
+  --font-family-heading: Georgia, serif;
+  
+  /* Spacing (rem-based) */
+  --spacing-xs: 0.25rem;
+  --spacing-sm: 0.5rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 1.5rem;
+  --spacing-xl: 2rem;
+  --spacing-2xl: 3rem;
+  
+  /* Breakpoints (for media queries) */
+  --breakpoint-mobile: 320px;
+  --breakpoint-tablet: 768px;
+  --breakpoint-desktop: 1024px;
+}
+

@@ -1,0 +1,544 @@
+{
+  "restaurants": [
+    {
+      "name": "The League Kitchen & Tavern – Belterra",
+      "type": "restaurant",
+      "description": "Upscale-but-casual neighborhood tavern with a vintage sports vibe, scratch-made American comfort food, great burgers, and a big bar program. Ideal for an easy lunch or dinner close to the house.",
+      "distance": "5–7 minutes",
+      "priceRange": "$$",
+      "address": "166 Hargraves Dr, Suite B300, Austin, TX 78737",
+      "phone": "(512) 595-7477",
+      "website": "https://www.leaguekitchen.com",
+      "social": {
+        "facebook": "https://www.facebook.com/leaguekitchen/",
+        "instagram": "https://www.instagram.com/leaguekitchen/",
+        "yelp": "https://www.yelp.com/biz/the-league-kitchen-and-tavern-austin-2"
+      },
+      "image": "/images/local-guide/theleague.png",
+      "imageAlt": "Cozy restaurant interior with leather booths and a busy bar"
+    },
+    {
+      "name": "Cousin Louie's Italian American",
+      "type": "restaurant",
+      "description": "Lively Italian-American spot from the TC4 hospitality group serving handmade pastas, classic red-sauce favorites, and big family-style platters. Great for a celebratory dinner without driving into downtown.",
+      "distance": "5–7 minutes",
+      "priceRange": "$$",
+      "address": "165 Hargraves Dr, Suite T100, Austin, TX 78737",
+      "phone": "(737) 277-0030",
+      "website": "https://cousin-louies.com",
+      "social": {
+        "instagram": "https://www.instagram.com/cousinlouiesitalian/",
+        "yelp": "https://www.yelp.com/biz/cousin-louies-italian-american-austin"
+      },
+      "image": "/images/local-guide/cousinlouies.png",
+      "imageAlt": "Italian restaurant table with pasta, salad, and wine"
+    },
+    {
+      "name": "Franklin Barbecue",
+      "type": "restaurant",
+      "description": "Legendary Austin barbecue joint famous for impossibly tender brisket, ribs, and sausages. Expect a line, but many visitors make it a bucket-list experience for Texas BBQ.",
+      "distance": "30–40 minutes",
+      "priceRange": "$$",
+      "address": "900 E 11th St, Austin, TX 78702",
+      "phone": "(512) 653-1187",
+      "website": "https://franklinbbq.com",
+      "social": {
+        "facebook": "https://www.facebook.com/franklinbbq/",
+        "instagram": "https://www.instagram.com/franklinbbq/",
+        "yelp": "https://www.yelp.com/biz/franklin-barbecue-austin"
+      },
+      "image": "/images/local-guide/franklinbbq.png",
+      "imageAlt": "Barbecue platter with brisket, ribs, and sides on butcher paper"
+    },
+    {
+      "name": "Austin Taco Project",
+      "type": "restaurant",
+      "description": "Creative taco bar in the Hilton Austin with playful fillings, shareable apps, craft cocktails, and arcade-style games. Fun downtown stop before or after events.",
+      "distance": "25–35 minutes",
+      "priceRange": "$$",
+      "address": "500 E 4th St, Austin, TX 78701",
+      "phone": "(512) 682-2739",
+      "website": "https://www.hilton.com/en/hotels/auscvhh-hilton-austin/dining/austin-taco-project/",
+      "social": {
+        "facebook": "https://www.facebook.com/AustinTacoProject/",
+        "yelp": "https://www.yelp.com/biz/austin-taco-project-austin"
+      },
+      "image": "/images/local-guide/austintacoproject.png",
+      "imageAlt": "Colorful tacos and cocktails on a wooden table"
+    },
+    {
+      "name": "Moonshine Patio Bar & Grill",
+      "type": "restaurant",
+      "description": "Classic Austin restaurant in a historic downtown building serving elevated Southern comfort food, big brunches, and cocktails on a shaded patio steps from the Convention Center.",
+      "distance": "25–35 minutes",
+      "priceRange": "$$",
+      "address": "303 Red River St, Austin, TX 78701",
+      "phone": "(512) 236-9599",
+      "website": "https://moonshinegrill.com",
+      "social": {
+        "facebook": "https://www.facebook.com/moonshinegrill/",
+        "yelp": "https://www.yelp.com/biz/moonshine-grill-austin"
+      },
+      "image": "/images/local-guide/moonshine.png",
+      "imageAlt": "Outdoor patio restaurant under string lights in the evening"
+    },
+    {
+      "name": "Odd Duck",
+      "type": "restaurant",
+      "description": "Celebrated farm-to-table restaurant known for creative small plates, wood-fired cooking, and a constantly changing seasonal menu. A top choice for a special night out in South Austin.",
+      "distance": "20–25 minutes",
+      "priceRange": "$$$",
+      "address": "1201 S Lamar Blvd, Austin, TX 78704",
+      "phone": "(512) 433-6521",
+      "website": "https://www.oddduckaustin.com",
+      "social": {
+        "facebook": "https://www.facebook.com/oddduckaustin/",
+        "instagram": "https://www.instagram.com/oddduckaustin/",
+        "yelp": "https://www.yelp.com/biz/odd-duck-austin-2"
+      },
+      "image": "/images/local-guide/oddduck.png",
+      "imageAlt": "Modern restaurant table with shared small plates and drinks"
+    }
+  ],
+  "coffee": [
+    {
+      "name": "Ani's Day & Night",
+      "type": "coffee",
+      "description": "Colorful house-turned-hangout with all-day coffee, cocktails, food trucks, and a big yard filled with picnic tables and shade. Great for remote work by day and low-key drinks at night.",
+      "distance": "25–30 minutes",
+      "priceRange": "$$",
+      "address": "7107 E Riverside Dr, Austin, TX 78741",
+      "website": "https://anisdayandnight.com",
+      "social": {
+        "facebook": "https://www.facebook.com/anisdayandnight/",
+        "instagram": "https://www.instagram.com/anisdayandnight/",
+        "yelp": "https://www.yelp.com/biz/ani-s-day-and-night-austin"
+      },
+      "image": "/images/local-guide/anis.png",
+      "imageAlt": "Outdoor bar and coffee space with picnic tables and string lights"
+    },
+    {
+      "name": "Café Crème – Oltorf",
+      "type": "coffee",
+      "description": "French-Vietnamese café known for beautiful latte art, sweet and savory crêpes, pastries, and a relaxed neighborhood vibe. Good option before heading into town or after a morning on the trail.",
+      "distance": "20–25 minutes",
+      "priceRange": "$",
+      "address": "1834 E Oltorf St, Austin, TX 78741",
+      "phone": "(512) 710-9473",
+      "website": "https://cafecremeaustin.com",
+      "social": {
+        "instagram": "https://www.instagram.com/cafecremeaustin/",
+        "yelp": "https://www.yelp.com/biz/cafe-creme-austin-2"
+      },
+      "image": "/images/local-guide/cafecreme.png",
+      "imageAlt": "Latte and crepe on a small café table"
+    },
+    {
+      "name": "Spokesman Coffee – South",
+      "type": "coffee",
+      "description": "Hip coffee shop and roastery in the St. Elmo district with plenty of seating, rotating taps of beer, and a fun industrial vibe. Great stop if you are already heading up 290 toward downtown.",
+      "distance": "20–25 minutes",
+      "priceRange": "$$",
+      "address": "440 E Saint Elmo Rd, Suite A-2, Austin, TX 78745",
+      "phone": "(512) 586-9657",
+      "website": "https://www.spokesmancoffee.com",
+      "social": {
+        "facebook": "https://www.facebook.com/spokesmancoffee/",
+        "instagram": "https://www.instagram.com/spokesmancoffee/",
+        "yelp": "https://www.yelp.com/biz/spokesman-austin-4"
+      },
+      "image": "/images/local-guide/spokesman.png",
+      "imageAlt": "Barista pouring latte art in a modern coffee shop"
+    },
+    {
+      "name": "Cosmic Coffee + Beer Garden",
+      "type": "coffee",
+      "description": "Beloved South Austin hangout with specialty coffee, a full bar, food trucks, and lush garden spaces with chickens and ponds. Perfect for groups who want coffee, cocktails, and casual food in one spot.",
+      "distance": "20–25 minutes",
+      "priceRange": "$$",
+      "address": "121 Pickle Rd, Austin, TX 78704",
+      "phone": "(512) 481-0694",
+      "website": "https://www.cosmiccoffeebeer.com",
+      "social": {
+        "instagram": "https://www.instagram.com/cosmiccoffeeco/",
+        "yelp": "https://www.yelp.com/biz/cosmic-coffee-beer-garden-austin"
+      },
+      "image": "/images/local-guide/cosmiccoffee.png",
+      "imageAlt": "Outdoor garden patio with picnic tables, trees, and lights"
+    },
+    {
+      "name": "Civil Goat Coffee – Manor",
+      "type": "coffee",
+      "description": "Local coffee roaster with excellent espresso drinks, house-roasted beans, and a cozy East Austin café. Known for its friendly vibe and, at some locations, resident goats that kids love.",
+      "distance": "30–35 minutes",
+      "priceRange": "$$",
+      "address": "2610 Manor Rd, Austin, TX 78722",
+      "website": "https://www.civilgoat.com",
+      "social": {
+        "facebook": "https://www.facebook.com/civilgoat/",
+        "instagram": "https://www.instagram.com/civilgoatcoffee/",
+        "yelp": "https://www.yelp.com/biz/civil-goat-coffee-austin-5"
+      },
+      "image": "/images/local-guide/civilgoat.png",
+      "imageAlt": "Cappuccino on a table in a bright coffee shop"
+    }
+  ],
+  "groceries": [
+    {
+      "name": "H-E-B Nutty Brown (Belterra Area)",
+      "type": "grocery",
+      "description": "Full-service Texas grocery store with a wide selection of everyday items, beer and wine, bakery, pharmacy, and curbside pickup. This is the closest and most convenient main grocery option to the home.",
+      "distance": "5–7 minutes",
+      "address": "12021 W US 290, Austin, TX 78737",
+      "phone": "(737) 610-5789",
+      "website": "https://www.heb.com/heb-store/US/tx/austin/nutty-brown-h-e-b-780",
+      "social": {
+        "facebook": "https://www.facebook.com/HEB/",
+        "instagram": "https://www.instagram.com/heb/",
+        "yelp": "https://www.yelp.com/biz/h-e-b-austin-86"
+      },
+      "image": "/images/local-guide/heb.png",
+      "imageAlt": "Grocery store aisle with produce and shoppers"
+    },
+    {
+      "name": "Trader Joe's – Arboretum",
+      "type": "grocery",
+      "description": "Popular specialty grocer for snacks, frozen meals, wine, and unique pantry items. Best paired with a trip to the surrounding Arboretum shopping and dining area.",
+      "distance": "30–35 minutes",
+      "address": "9722 Great Hills Trl, Suite 200, Austin, TX 78759",
+      "website": "https://www.traderjoes.com",
+      "social": {
+        "instagram": "https://www.instagram.com/traderjoes/",
+        "yelp": "https://www.yelp.com/biz/trader-joes-austin-11"
+      },
+      "image": "/images/local-guide/traderjoesarboretum.png",
+      "imageAlt": "Grocery store shelves with colorful packaged foods"
+    },
+    {
+      "name": "Trader Joe's – Rollingwood / Bee Cave Road",
+      "type": "grocery",
+      "description": "Another Trader Joe's location convenient to downtown and Westlake, great for grabbing wine, cheese, and snacks on your way back to the rental from central Austin.",
+      "distance": "25–30 minutes",
+      "address": "2805 Bee Cave Rd, Austin, TX 78746",
+      "website": "https://www.traderjoes.com",
+      "social": {
+        "instagram": "https://www.instagram.com/traderjoes/",
+        "yelp": "https://www.yelp.com/biz/trader-joes-austin-4"
+      },
+      "image": "/images/local-guide/traderjoesrollingwood.png",
+      "imageAlt": "Person shopping in a grocery store produce section"
+    }
+  ],
+  "outdoorActivities": {
+    "hiking": [
+      {
+        "name": "Lady Bird Lake & Ann and Roy Butler Hike-and-Bike Trail",
+        "type": "activity",
+        "description": "Ten miles of lakeside trail circling Lady Bird Lake in downtown Austin, popular with walkers, runners, and cyclists. You can also rent kayaks, canoes, or paddleboards to enjoy the skyline from the water.",
+        "distance": "25–30 minutes",
+        "address": "Lady Bird Lake, Austin, TX 78701",
+        "website": "https://thetrailconservancy.org/visit-the-trail/",
+        "social": {
+          "facebook": "https://www.facebook.com/thetrailconservancy/",
+          "instagram": "https://www.instagram.com/thetrailconservancy/",
+          "yelp": "https://www.yelp.com/biz/ann-and-roy-butler-hike-and-bike-trail-austin"
+        },
+        "image": "/images/local-guide/ladybird.png",
+        "imageAlt": "People walking and biking on a lakeside path with city skyline views"
+      },
+      {
+        "name": "Barton Springs Pool",
+        "type": "activity",
+        "description": "Iconic spring-fed pool in Zilker Park with clear, cool water year-round. Locals and visitors come to swim, sunbathe on the grassy hill, and cool off after a day exploring Austin.",
+        "distance": "20–25 minutes",
+        "address": "2201 Barton Springs Rd, Austin, TX 78704",
+        "website": "https://www.austintexas.gov/department/barton-springs-pool",
+        "social": {
+          "yelp": "https://www.yelp.com/biz/barton-springs-pool-austin"
+        },
+        "image": "/images/local-guide/barton.png",
+        "imageAlt": "Large natural swimming pool with people swimming and lounging on grassy banks"
+      }
+    ],
+    "hillCountry": [
+      {
+        "name": "Lady Bird Johnson Wildflower Center",
+        "type": "attraction",
+        "description": "State Botanic Garden of Texas with trails, meadows, and seasonal wildflower displays, about 20 minutes from the property. Great for gentle walks, photography, and family-friendly events.",
+        "distance": "20 minutes",
+        "address": "4801 La Crosse Ave, Austin, TX 78739",
+        "phone": "(512) 232-0100",
+        "website": "https://www.wildflower.org",
+        "social": {
+          "facebook": "https://www.facebook.com/wildflowercenter",
+          "instagram": "https://www.instagram.com/wildflowercenter",
+          "yelp": "https://www.yelp.com/biz/lady-bird-johnson-wildflower-center-austin-2"
+        },
+        "image": "/images/local-guide/ladybirdwildflower.png",
+        "imageAlt": "Blooming trees and flowers along a path at Lady Bird Johnson Wildflower Center"
+      },
+      {
+        "name": "Wild Basin Wilderness Preserve",
+        "type": "attraction",
+        "description": "227-acre Hill Country preserve with about 3 miles of hiking trails, creek crossings, and overlooks. A quieter alternative to the more famous parks, focused on conservation and low-impact visits.",
+        "distance": "30 minutes",
+        "address": "805 N Capital of Texas Hwy, Austin, TX 78746",
+        "phone": "(512) 327-7622",
+        "website": "https://wildbasin.org",
+        "social": {
+          "facebook": "https://www.facebook.com/wildbasin",
+          "instagram": "https://www.instagram.com/wildbasin",
+          "yelp": "https://www.yelp.com/biz/wild-basin-creative-research-center-austin-4"
+        },
+        "image": "/images/local-guide/wildbasinpreserve.png",
+        "imageAlt": "Small waterfall flowing into a shaded pool at Wild Basin Wilderness Preserve"
+      },
+      {
+        "name": "Hamilton Pool Preserve",
+        "type": "attraction",
+        "description": "Iconic Texas Hill Country grotto with a jade-green pool, waterfall, and dramatic limestone overhang. Reservations are required; swimming access varies depending on conditions.",
+        "distance": "25 minutes",
+        "address": "24300 Hamilton Pool Rd, Dripping Springs, TX 78620",
+        "phone": "(512) 264-2740",
+        "website": "https://parks.traviscountytx.gov/parks/hamilton-pool-preserve",
+        "social": {
+          "facebook": "https://www.facebook.com/profile.php?id=108070625888428",
+          "instagram": "https://www.instagram.com/explore/locations/215174839/hamilton-pool-preserve/",
+          "yelp": "https://www.yelp.com/biz/hamilton-pool-preserve-dripping-springs-2"
+        },
+        "image": "/images/local-guide/hamiltonpoolpreserve.png",
+        "imageAlt": "Natural pool beneath a rocky grotto with a waterfall at Hamilton Pool Preserve"
+      },
+      {
+        "name": "Covert Park at Mount Bonnell",
+        "type": "attraction",
+        "description": "Short stair climb to one of Austin's classic overlooks with sweeping views of the Colorado River, Lake Austin, and downtown skyline. Popular for sunsets and photos.",
+        "distance": "35 minutes",
+        "address": "3800 Mount Bonnell Rd, Austin, TX 78731",
+        "phone": "(512) 974-6700",
+        "website": "https://www.tclf.org/landscapes/covert-park-mount-bonnell",
+        "social": {
+          "facebook": "https://www.facebook.com/pages/Covert-Park-at-Mt-Bonnell/1895300740766947",
+          "instagram": "https://www.instagram.com/explore/locations/226289441126096/covert-park-mount-bonnell/",
+          "yelp": "https://www.yelp.com/biz/covert-park-at-mount-bonnell-austin"
+        },
+        "image": "/images/local-guide/covertpark.png",
+        "imageAlt": "View of the Austin skyline and river from the summit of Mount Bonnell at Covert Park"
+      }
+    ],
+    "parks": [
+      {
+        "name": "Wild Basin Wilderness Preserve",
+        "type": "attraction",
+        "description": "A 227-acre nature preserve with shaded oak-juniper forest trails, creek crossings, and Hill Country wildlife. Perfect for quiet morning hikes, bird-watching, and photography. Note: Dogs are not allowed to protect endangered habitat.",
+        "distance": "20–30 minutes",
+        "address": "805 N Capital of Texas Hwy, Austin, TX 78746",
+        "phone": "(512) 327-7622",
+        "website": "https://wildbasin.org",
+        "social": {
+          "facebook": "https://www.facebook.com/WildBasinWildernessPreserve",
+          "instagram": "https://www.instagram.com/explore/locations/223402374/wild-basin-wilderness-preserve/",
+          "yelp": "https://www.yelp.com/biz/wild-basin-wilderness-preserve-austin"
+        },
+        "image": "/images/local-guide/wildbasinpreserve.png",
+        "imageAlt": "Small waterfall and rocky stream surrounded by trees at Wild Basin Wilderness Preserve"
+      },
+      {
+        "name": "McKinney Falls State Park",
+        "type": "attraction",
+        "description": "A scenic state park featuring waterfalls, natural limestone pools along Onion Creek, shaded picnic areas, hiking and biking trails, and wildlife viewing. Swimming and wading access vary by season and park conditions.",
+        "distance": "25–30 minutes",
+        "priceRange": "$",
+        "address": "5808 McKinney Falls Pkwy, Austin, TX 78744",
+        "phone": "(512) 243-1643",
+        "website": "https://tpwd.texas.gov/state-parks/mckinney-falls",
+        "social": {
+          "facebook": "https://www.facebook.com/McKinneyFallsStatePark",
+          "instagram": "https://www.instagram.com/explore/locations/215659423/mckinney-falls-state-park/",
+          "yelp": "https://www.yelp.com/biz/mckinney-falls-state-park-austin-2"
+        },
+        "image": "https://tpwd.texas.gov/state-parks/mckinney-falls/gallery/lower-mckinney-falls.jpg",
+        "imageAlt": "Water flowing over limestone ledges at McKinney Falls State Park"
+      }
+    ]
+  },
+  "austinAttractions": {
+    "downtown": [
+      {
+        "name": "Zilker Metropolitan Park",
+        "type": "attraction",
+        "description": "Austin's central green space with wide open fields, playgrounds, picnic areas, and skyline views. Home to festivals, the Zilker Zephyr train area, Barton Springs Pool, and the trail along Lady Bird Lake.",
+        "distance": "20–25 minutes",
+        "address": "2100 Barton Springs Rd, Austin, TX 78704",
+        "website": "https://www.austintexas.gov/department/zilker-metropolitan-park",
+        "social": {
+          "yelp": "https://www.yelp.com/biz/zilker-metropolitan-park-austin"
+        },
+        "image": "/images/local-guide/zilkerpark.png",
+        "imageAlt": "Large city park with people relaxing on the grass and skyline in the background"
+      },
+      {
+        "name": "Zilker Botanical Garden",
+        "type": "attraction",
+        "description": "Beautiful botanical garden inside Zilker Park featuring themed areas like a Japanese garden, rose garden, and cactus collections. A peaceful spot for photos, strolling, and enjoying Hill Country plants.",
+        "distance": "20–25 minutes",
+        "address": "2220 Barton Springs Rd, Austin, TX 78746",
+        "website": "https://zilkergarden.org",
+        "social": {
+          "facebook": "https://www.facebook.com/zilkerbotanicalgarden/",
+          "instagram": "https://www.instagram.com/zilkerbotanicalgarden/",
+          "yelp": "https://www.yelp.com/biz/zilker-botanical-garden-austin"
+        },
+        "image": "/images/local-guide/zilker.png",
+        "imageAlt": "Pathway through a lush garden with flowers and trees"
+      },
+      {
+        "name": "Rainey Street Historic District",
+        "type": "attraction",
+        "description": "Famous downtown strip of converted bungalow bars and restaurants. Expect food trucks, patios, live music, and a fun nightlife scene steps from the lake trail and new waterfront developments.",
+        "distance": "25–30 minutes",
+        "address": "Rainey St, Austin, TX 78701",
+        "website": "https://www.austintexas.org/explore/entertainment-districts/rainey-street/",
+        "social": {
+          "yelp": "https://www.yelp.com/biz/rainey-street-austin"
+        },
+        "image": "/images/local-guide/rainey.png",
+        "imageAlt": "Nighttime street scene with lit-up bungalow bars and people walking"
+      },
+      {
+        "name": "Red River Cultural District",
+        "type": "attraction",
+        "description": "Lively downtown corridor packed with live music venues, bars, and late-night eats. Great place to catch a local band, from indie rock to metal, and experience Austin's music scene.",
+        "distance": "25–30 minutes",
+        "address": "Red River St between 6th and 12th, Austin, TX 78701",
+        "website": "https://redriverculturaldistrict.org",
+        "social": {
+          "facebook": "https://www.facebook.com/RedRiverCulturalDistrict/",
+          "instagram": "https://www.instagram.com/redriverculturaldistrict/"
+        },
+        "image": "/images/local-guide/redriver.png",
+        "imageAlt": "Live music venue exterior with neon signs at night"
+      },
+      {
+        "name": "Downtown Austin Walking Tour & Live Music Night",
+        "type": "attraction",
+        "description": "Create your own evening walking loop through downtown: start near the Texas State Capitol, stroll down Congress Avenue to the river, then branch off to 6th Street, Red River, or Rainey Street for live music and late-night bites.",
+        "distance": "25–30 minutes",
+        "address": "Texas State Capitol, 1100 Congress Ave, Austin, TX 78701 (suggested starting point)",
+        "website": "https://www.austintexas.org/music-scene/",
+        "image": "/images/local-guide/austinwalkingtour.png",
+        "imageAlt": "Downtown city street at dusk with cars, people, and lit buildings"
+      }
+    ],
+    "localSpots": [
+      {
+        "name": "The Switch BBQ & Craft House",
+        "type": "local",
+        "description": "A Hill Country favorite serving Texas BBQ with a Cajun influence — brisket, gumbo, house sausage, and great cocktails. Casual, family-friendly, and close to the property.",
+        "distance": "7 minutes",
+        "priceRange": "$$",
+        "address": "166 Hargraves Dr Suite H100, Austin, TX 78737",
+        "phone": "(512) 614-5028",
+        "website": "https://theswitchdripping.com/",
+        "social": {
+          "facebook": "https://www.facebook.com/theswitchatx",
+          "instagram": "https://www.instagram.com/theswitchatx",
+          "yelp": "https://www.yelp.com/biz/the-switch-austin-2"
+        },
+        "image": "/images/local-guide/theswitch.png",
+        "imageAlt": "Texas barbecue plate at The Switch BBQ with brisket, pickles, and sides"
+      },
+      {
+        "name": "Homespun Kitchen & Bar",
+        "type": "local",
+        "description": "Fresh, farm-to-table comfort food with a small-town Texas atmosphere. Brunch, live music nights, and outdoor seating make it a charming local favorite.",
+        "distance": "12 minutes",
+        "priceRange": "$$",
+        "address": "131 E Mercer St, Dripping Springs, TX 78620",
+        "phone": "(512) 829-4157",
+        "website": "https://homespunkitchenandbar.com/",
+        "social": {
+          "facebook": "https://www.facebook.com/homespunkitchenandbar",
+          "instagram": "https://www.instagram.com/homespunkitchenandbar",
+          "yelp": "https://www.yelp.com/biz/homespun-kitchen-and-bar-dripping-springs"
+        },
+        "image": "/images/local-guide/homespun.png",
+        "imageAlt": "Outdoor seating area at Homespun Kitchen & Bar with live music setup"
+      },
+      {
+        "name": "Vista Brewing",
+        "type": "local",
+        "description": "A craft brewery and ranch-style property with onsite honey, gardens, a beer hall, and weekend live music. A perfect Hill Country afternoon spot.",
+        "distance": "18 minutes",
+        "priceRange": "$$",
+        "address": "12516 Fitzhugh Rd, Driftwood, TX 78619",
+        "phone": "(512) 766-1842",
+        "website": "https://vistabrewingtx.com",
+        "social": {
+          "facebook": "https://www.facebook.com/vistabrewing",
+          "instagram": "https://www.instagram.com/vistabrewing",
+          "yelp": "https://www.yelp.com/biz/vista-brewing-driftwood"
+        },
+        "image": "/images/local-guide/vistabrewing.png",
+        "imageAlt": "Vista Brewing outdoor beer garden with picnic tables and Hill Country scenery"
+      },
+      {
+        "name": "Pieous Pizza",
+        "type": "local",
+        "description": "Beloved Austin pizzeria known for wood-fired Neapolitan pies, homemade pastrami, fresh sourdough, and a relaxed family atmosphere.",
+        "distance": "9 minutes",
+        "priceRange": "$$",
+        "address": "166 Hargraves Dr Ste G300, Austin, TX 78737",
+        "phone": "(512) 394-7041",
+        "website": "https://www.pieous.com",
+        "social": {
+          "facebook": "https://www.facebook.com/pieous",
+          "instagram": "https://www.instagram.com/pieous",
+          "yelp": "https://www.yelp.com/biz/pieous-austin"
+        },
+        "image": "/images/local-guide/pieous.png",
+        "imageAlt": "Wood-fired pizza and fresh house-made sourdough bread at Pieous"
+      },
+      {
+        "name": "Jester King Brewery",
+        "type": "local",
+        "description": "Iconic farmhouse brewery and outdoor venue offering sour beers, wood-fired pizza, goats, trails, and fire pits — a uniquely Austin experience.",
+        "distance": "18 minutes",
+        "priceRange": "$$",
+        "address": "13187 Fitzhugh Rd, Austin, TX 78736",
+        "phone": "(512) 660-9111",
+        "website": "https://jesterkingbrewery.com",
+        "social": {
+          "facebook": "https://www.facebook.com/jesterkingbrewery",
+          "instagram": "https://www.instagram.com/jesterkingbrewery",
+          "yelp": "https://www.yelp.com/biz/jester-king-brewery-austin"
+        },
+        "image": "/images/local-guide/jesterking.png",
+        "imageAlt": "Outdoor tables and farmhouse brewery setting at Jester King with visitors and goats"
+      },
+      {
+        "name": "Driftwood Dugout",
+        "type": "local",
+        "description": "Quirky, super-local beer and food trailer park with casual drinks, rotating food trucks, and live music — feels like a true local hangout.",
+        "distance": "11 minutes",
+        "priceRange": "$",
+        "address": "20901 FM 150, Driftwood, TX 78619",
+        "phone": "(737) 201-0624",
+        "website": "https://driftwooddugout.com",
+        "social": {
+          "facebook": "https://www.facebook.com/driftwoodaxehouse/",
+          "instagram": "https://www.instagram.com/driftwoodaxe/",
+          "yelp": "https://www.yelp.com/biz/driftwood-axe-house-driftwood"
+        },
+        "image": "/images/local-guide/driftwooddugout.png",
+        "imageAlt": "Outdoor beer garden with picnic tables and string lights at Driftwood Dugout"
+      }
+    ]
+  },
+  "transportation": {
+    "driving": "The property is easily accessible by car. From downtown Austin, take Highway 290 West for approximately 20 minutes.",
+    "rideSharing": "Uber and Lyft are available in the area. Expect a 20-30 minute ride from downtown Austin.",
+    "parking": "Parking is available on the property. Please park in designated areas.",
+    "carRental": "Car rental services are available at Austin-Bergstrom International Airport and in downtown Austin."
+  }
+}

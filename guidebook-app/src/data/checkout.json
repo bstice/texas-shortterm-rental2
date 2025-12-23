@@ -1,0 +1,70 @@
+{
+  "checklist": [
+    {
+      "id": "clean-1",
+      "category": "clean",
+      "text": "Wash and put away all dishes"
+    },
+    {
+      "id": "clean-2",
+      "category": "clean",
+      "text": "Take out all trash and recycling"
+    },
+    {
+      "id": "clean-3",
+      "category": "clean",
+      "text": "Wipe down kitchen surfaces"
+    },
+    {
+      "id": "return-1",
+      "category": "return",
+      "text": "Return all keys to their original location"
+    },
+    {
+      "id": "return-2",
+      "category": "return",
+      "text": "Return limo keys if used"
+    },
+    {
+      "id": "trash-1",
+      "category": "trash",
+      "text": "Empty all trash cans"
+    },
+    {
+      "id": "trash-2",
+      "category": "trash",
+      "text": "Take trash to designated area"
+    },
+    {
+      "id": "other-1",
+      "category": "other",
+      "text": "Turn off all lights"
+    },
+    {
+      "id": "other-2",
+      "category": "other",
+      "text": "Set thermostat to 72°F"
+    },
+    {
+      "id": "other-3",
+      "category": "other",
+      "text": "Lock all doors and windows"
+    }
+  ],
+  "departureNotes": {
+    "checkoutTime": "11:00 AM",
+    "keyLockInstructions": "Please lock the door using the smart lock code when you leave. Make sure the door is fully closed and locked.",
+    "reminders": [
+      "Check that you have all your personal belongings",
+      "Make sure all windows and doors are closed and locked",
+      "Turn off all lights and appliances",
+      "Leave the property in the same condition you found it"
+    ],
+    "contactInfo": {
+      "phone": "(512) 555-0100",
+      "email": "host@example.com",
+      "emergency": "(512) 555-9999"
+    }
+  }
+}
+
