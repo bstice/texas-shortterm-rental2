@@ -97,7 +97,7 @@ export async function POST(request: Request) {
       system: systemPrompt,
       messages: recentMessages,
       temperature: 0.7,
-      maxTokens: 500,
+      // maxTokens removed - not supported in AI SDK v5, model will use default
     });
     
     return result.toUIMessageStreamResponse();

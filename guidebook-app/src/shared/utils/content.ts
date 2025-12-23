@@ -1,9 +1,9 @@
 import type { ContentData } from '../types/content.js';
-import propertyData from '../../data/property.json';
-import beforeYouArriveData from '../../data/before-you-arrive.json';
-import duringYourStayData from '../../data/during-your-stay.json';
-import localGuideData from '../../data/local-guide.json';
-import checkoutData from '../../data/checkout.json';
+import propertyData from '../../data/property.json' with { type: 'json' };
+import beforeYouArriveData from '../../data/before-you-arrive.json' with { type: 'json' };
+import duringYourStayData from '../../data/during-your-stay.json' with { type: 'json' };
+import localGuideData from '../../data/local-guide.json' with { type: 'json' };
+import checkoutData from '../../data/checkout.json' with { type: 'json' };
 
 /**
  * Content loading utility
