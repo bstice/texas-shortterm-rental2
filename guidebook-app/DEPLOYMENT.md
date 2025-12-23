@@ -105,7 +105,7 @@ The project is already configured for Vercel deployment:
     }
   ],
   "functions": {
-    "api/chat/route.ts": {
+    "api/chat/index.ts": {
       "maxDuration": 30
     }
   }

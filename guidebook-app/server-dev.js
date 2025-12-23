@@ -66,7 +66,7 @@ app.post('/api/chat', async (req, res) => {
     // Dynamically import the API route handler
     // tsx handles TypeScript compilation automatically
     // Use file:// URL for better compatibility
-    const apiRoutePath = resolve(__dirname, 'api/chat/route.ts');
+    const apiRoutePath = resolve(__dirname, 'api/chat/index.ts');
     const apiRouteUrl = `file://${apiRoutePath}`;
     console.log('📦 Importing API route from:', apiRoutePath);
     console.log('   URL:', apiRouteUrl);

@@ -58,7 +58,7 @@ When deployed to Vercel, the API routes in the `api/` directory are automaticall
 
 ### 404 Error on `/api/chat`
 - Make sure both servers are running (if using Option 1 or 2)
-- Check that `api/chat/route.ts` exists
+- Check that `api/chat/index.ts` exists
 - Verify environment variables are set in `.env.local`
 
 ### API Key Error
