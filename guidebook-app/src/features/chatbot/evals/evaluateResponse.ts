@@ -75,7 +75,7 @@ export function evaluateResponse(
       }
       
       if (found) {
-        pointsEarned += 0.4 / testCase.mustInclude.length;
+        pointsEarned += 0.4 / (testCase.mustInclude?.length || 1);
       }
       return {
         check: `Must include: "${phrase}"`,
@@ -97,10 +97,10 @@ export function evaluateResponse(
 
   // Check 2: Must not include forbidden phrases (critical - 30% of score)
   if (testCase.mustNotInclude && testCase.mustNotInclude.length > 0) {
-    const forbiddenChecks = testCase.mustNotInclude.map(phrase => {
+    const forbiddenChecks = testCase.mustNotInclude.map((phrase: string) => {
       const found = normalizedResponse.includes(phrase.toLowerCase());
       if (!found) {
-        pointsEarned += 0.3 / testCase.mustNotInclude.length;
+        pointsEarned += 0.3 / (testCase.mustNotInclude?.length || 1);
       }
       return {
         check: `Must not include: "${phrase}"`,
@@ -202,11 +202,6 @@ export function calculateStats(results: EvaluationResult[]) {
   const total = results.length;
   const passed = results.filter(r => r.passed).length;
   const averageScore = results.reduce((sum, r) => sum + r.score, 0) / total;
-  const byCategory = results.reduce((acc, result) => {
-    const testCase = results.find(r => r.testCaseId === result.testCaseId);
-    // We'd need to pass testCase through, but for now just count
-    return acc;
-  }, {} as Record<string, number>);
 
   return {
     total,
