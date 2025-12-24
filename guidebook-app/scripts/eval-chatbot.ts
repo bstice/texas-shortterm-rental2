@@ -8,16 +8,47 @@
  * Or: tsx scripts/eval-chatbot.ts
  */
 
+import { readFileSync } from 'fs';
+import { resolve, dirname } from 'path';
+import { fileURLToPath } from 'url';
 import { testCases } from '../src/features/chatbot/evals/testCases';
 import { evaluateResponse, calculateStats } from '../src/features/chatbot/evals/evaluateResponse';
+
+// Load environment variables from .env.local
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const envPath = resolve(__dirname, '../.env.local');
+
+try {
+  const envFile = readFileSync(envPath, 'utf-8');
+  envFile.split('\n').forEach(line => {
+    const [key, ...valueParts] = line.split('=');
+    if (key && valueParts.length > 0 && !key.trim().startsWith('#')) {
+      const value = valueParts.join('=').trim();
+      if (value && !process.env[key.trim()]) {
+        process.env[key.trim()] = value;
+      }
+    }
+  });
+  console.log('✓ Loaded environment variables from .env.local');
+} catch (err) {
+  console.warn('⚠ Could not load .env.local:', (err as Error).message);
+  console.warn('   Make sure .env.local exists in the guidebook-app directory');
+}
 
 // Check if API is available
 const API_URL = process.env.API_URL || 'http://localhost:3001/api/chat';
 const API_KEY = process.env.OPENAI_API_KEY;
 
 if (!API_KEY) {
-  console.error('❌ OPENAI_API_KEY environment variable is not set');
-  console.error('Set it in .env.local or as an environment variable');
+  console.error('\n❌ OPENAI_API_KEY environment variable is not set\n');
+  console.error('To fix this:');
+  console.error('1. Create a .env.local file in the guidebook-app directory');
+  console.error('2. Add your OpenAI API key:');
+  console.error('   OPENAI_API_KEY=your-api-key-here\n');
+  console.error('Or set it as an environment variable:');
+  console.error('   export OPENAI_API_KEY=your-api-key-here');
+  console.error('   npm run eval:chatbot\n');
   process.exit(1);
 }
 
