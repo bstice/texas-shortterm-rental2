@@ -42,7 +42,7 @@ export default function DuringYourStayPage() {
         </Link>
 
         <Link
-          to="/during-your-stay/how-to-guides/ac-heating"
+          to="/during-your-stay/how-to-guides"
           className={styles.card}
         >
           <div className={styles.cardIcon}>
