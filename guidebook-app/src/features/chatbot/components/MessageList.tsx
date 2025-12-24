@@ -3,13 +3,15 @@ import type { UIMessage } from 'ai';
 import { useChatContext } from '../hooks/useChatContext';
 import { WELCOME_MESSAGE } from '../utils/constants';
 import MessageBubble from './MessageBubble';
+import LoadingIndicator from './LoadingIndicator';
 import styles from './MessageList.module.css';
 
 interface MessageListProps {
   messages: UIMessage[];
+  isLoading?: boolean;
 }
 
-export default function MessageList({ messages }: MessageListProps) {
+export default function MessageList({ messages, isLoading = false }: MessageListProps) {
   const { hasSeenWelcome, markWelcomeSeen } = useChatContext();
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -80,6 +82,24 @@ export default function MessageList({ messages }: MessageListProps) {
     }
   }, [messages]);
 
+  // Scroll when loading indicator appears
+  useEffect(() => {
+    if (isLoading) {
+      // Wait for loading indicator to render, then scroll to show it
+      requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+          setTimeout(() => {
+            messagesEndRef.current?.scrollIntoView({ 
+              behavior: 'smooth',
+              block: 'end',
+              inline: 'nearest'
+            });
+          }, 100);
+        });
+      });
+    }
+  }, [isLoading]);
+
   // Cleanup on unmount
   useEffect(() => {
     return () => {
@@ -116,6 +136,7 @@ export default function MessageList({ messages }: MessageListProps) {
           />
         );
       })}
+      {isLoading && <LoadingIndicator />}
       <div ref={messagesEndRef} />
     </div>
   );

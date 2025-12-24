@@ -4,7 +4,6 @@ import { useChatContext } from '../hooks/useChatContext';
 import { useChatbot } from '../hooks/useChatbot';
 import MessageList from './MessageList';
 import ChatInput from './ChatInput';
-import LoadingIndicator from './LoadingIndicator';
 import styles from './ChatbotWindow.module.css';
 
 export default function ChatbotWindow() {
@@ -81,8 +80,7 @@ export default function ChatbotWindow() {
         </header>
 
         <div className={styles.content}>
-          <MessageList messages={messages} />
-          {isLoading && <LoadingIndicator />}
+          <MessageList messages={messages} isLoading={isLoading} />
           {error && (
             <div className={styles.error}>
               <p>Sorry, something went wrong. Please try again.</p>
