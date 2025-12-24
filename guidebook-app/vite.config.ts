@@ -31,11 +31,14 @@ export default defineConfig({
   build: {
     outDir: 'dist',
     sourcemap: true,
+    chunkSizeWarningLimit: 2500, // Increase limit to 2.5MB (PDF library is large)
     rollupOptions: {
       output: {
         manualChunks: {
           'react-vendor': ['react', 'react-dom', 'react-router-dom'],
           'markdown': ['react-markdown', 'remark-gfm'],
+          // PDF library is dynamically imported, but we can still chunk it if needed
+          'pdf-vendor': ['@react-pdf/renderer', 'marked'],
         },
       },
     },
