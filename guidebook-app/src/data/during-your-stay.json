@@ -165,6 +165,54 @@
       ]
     },
     {
+      "id": "hot-tub",
+      "title": "Hot Tub",
+      "category": "hottub",
+      "steps": [
+        {
+          "title": "Locate the hot tub",
+          "description": "The hot tub is located in the outdoor area. It's easily accessible from the main house."
+        },
+        {
+          "title": "Check temperature",
+          "description": "The hot tub should be pre-heated. Check the temperature display to ensure it's at your desired setting (typically 100-104°F)."
+        },
+        {
+          "title": "Enter safely",
+          "description": "Use the steps or ladder to enter the hot tub. Be careful as surfaces may be slippery when wet."
+        },
+        {
+          "title": "Adjust settings",
+          "description": "Use the control panel to adjust jets, temperature, and lighting as desired. The controls are located on the side of the hot tub."
+        },
+        {
+          "title": "Enjoy responsibly",
+          "description": "Limit your time in the hot tub to 15-20 minutes at a time. Stay hydrated and exit if you feel dizzy or uncomfortable."
+        },
+        {
+          "title": "When finished",
+          "description": "Turn off jets and lights when finished. Close the cover securely to maintain temperature and keep debris out."
+        }
+      ],
+      "safety": [
+        "Never use the hot tub alone",
+        "Supervise children at all times - children under 5 should not use the hot tub",
+        "Do not exceed 104°F (40°C) temperature",
+        "Limit time to 15-20 minutes to avoid overheating",
+        "Stay hydrated - drink water before and after use",
+        "Do not use if you are pregnant, have heart conditions, or are under the influence of alcohol",
+        "Exit immediately if you feel dizzy, nauseous, or uncomfortable",
+        "Keep the cover closed when not in use"
+      ],
+      "troubleshooting": [
+        "If the hot tub is not heating, check that the power is on and the temperature is set correctly",
+        "If jets are not working, check the control panel settings and ensure the pump is running",
+        "If the water appears cloudy or has an unusual odor, do not use and contact the host immediately",
+        "If the control panel is not responding, try turning the power off and on again",
+        "If you notice any leaks or damage, contact the host immediately"
+      ]
+    },
+    {
       "id": "limo",
       "title": "Limo",
       "category": "limo",
