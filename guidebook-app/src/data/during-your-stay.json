@@ -213,6 +213,90 @@
       ]
     },
     {
+      "id": "tv-streaming",
+      "title": "TV & Streaming",
+      "category": "tv",
+      "steps": [
+        {
+          "title": "Turn on the TV",
+          "description": "Use the TV remote to turn on the television. The TV is located in the main living area."
+        },
+        {
+          "title": "Select input source",
+          "description": "Use the input/source button on the remote to select the correct input (HDMI 1, HDMI 2, etc.) for your streaming device."
+        },
+        {
+          "title": "Connect to streaming device",
+          "description": "If using a streaming device (Roku, Apple TV, Fire Stick, etc.), ensure it's connected to an HDMI port and powered on."
+        },
+        {
+          "title": "Connect to WiFi",
+          "description": "Use the WiFi password provided in the guidebook to connect your streaming device to the GuestNetwork."
+        },
+        {
+          "title": "Launch streaming apps",
+          "description": "Navigate to your preferred streaming service (Netflix, Hulu, Disney+, etc.) and sign in with your account."
+        },
+        {
+          "title": "Adjust volume and settings",
+          "description": "Use the TV remote to adjust volume, picture settings, and other preferences as needed."
+        }
+      ],
+      "troubleshooting": [
+        "If the TV won't turn on, check that it's plugged in and the power outlet is working",
+        "If there's no picture, check the input source and ensure cables are connected properly",
+        "If streaming is slow or buffering, check your WiFi connection and try moving closer to the router",
+        "If the remote isn't working, check the batteries and ensure you're pointing it at the TV",
+        "If you can't find a streaming app, check the app store on your streaming device",
+        "If audio isn't working, check the TV volume and ensure the correct audio output is selected",
+        "If issues persist, try unplugging the TV and streaming device for 30 seconds, then plugging back in"
+      ]
+    },
+    {
+      "id": "appliances",
+      "title": "Appliances",
+      "category": "appliances",
+      "steps": [
+        {
+          "title": "Kitchen appliances overview",
+          "description": "The kitchen is fully equipped with modern appliances including a refrigerator, stove, oven, microwave, dishwasher, and coffee maker."
+        },
+        {
+          "title": "Refrigerator",
+          "description": "The refrigerator is located in the kitchen. Adjust the temperature settings as needed using the control panel inside."
+        },
+        {
+          "title": "Stove and oven",
+          "description": "The gas/electric stove and oven are ready to use. Turn the knobs to light the burners or set the oven temperature. The oven may need to preheat before use."
+        },
+        {
+          "title": "Microwave",
+          "description": "The microwave is located above or near the stove. Use the keypad to set time and power level. Press start to begin heating."
+        },
+        {
+          "title": "Dishwasher",
+          "description": "Load dishes in the dishwasher, add detergent to the dispenser, select the appropriate cycle (normal, heavy, light), and press start. The dishwasher will run automatically."
+        },
+        {
+          "title": "Coffee maker",
+          "description": "Fill the water reservoir, add coffee grounds to the filter, place the carafe, and press the brew button. The coffee maker will automatically stop when finished."
+        },
+        {
+          "title": "Washing machine and dryer",
+          "description": "If available, the washing machine and dryer are located in the laundry area. Follow the instructions on the machines for loading, selecting cycles, and adding detergent."
+        }
+      ],
+      "troubleshooting": [
+        "If an appliance won't turn on, check that it's plugged in and the circuit breaker hasn't tripped",
+        "If the refrigerator isn't cooling, check the temperature settings and ensure the door is closed properly",
+        "If the stove won't light, check that the gas is on (if gas stove) or that the power is connected (if electric)",
+        "If the microwave isn't working, check that the door is closed securely and the timer is set correctly",
+        "If the dishwasher isn't cleaning properly, check that detergent was added and the cycle was selected correctly",
+        "If the coffee maker isn't brewing, check that water was added and the filter basket is in place",
+        "If any appliance is making unusual noises or not functioning properly, stop using it and contact the host immediately"
+      ]
+    },
+    {
       "id": "limo",
       "title": "Limo",
       "category": "limo",
