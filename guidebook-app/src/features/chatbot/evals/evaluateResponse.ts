@@ -51,21 +51,27 @@ export function evaluateResponse(
       let found = false;
       
       // Direct substring match (handles spaces, case-insensitive)
+      // This is the primary check - simple and reliable
       if (normalizedResponse.includes(normalizedPhrase)) {
         found = true;
       }
       // For single words, also check if they appear as part of compound words
-      // e.g., "guest" should match "guestnetwork" or "guest network"
-      else if (normalizedPhrase.length > 3 && !normalizedPhrase.includes(' ')) {
-        // Check if the word appears as a standalone word or part of a compound
-        const wordBoundaryRegex = new RegExp(`\\b${normalizedPhrase}\\b|${normalizedPhrase}`, 'i');
-        found = wordBoundaryRegex.test(normalizedResponse);
+      // e.g., "guest" should match "guestnetwork" (no space) or "guest network" (with space)
+      // Since normalizedResponse collapses spaces, we check both the word alone and as part of compound
+      else if (normalizedPhrase.length > 2 && !normalizedPhrase.includes(' ')) {
+        // Remove spaces from normalized response temporarily to check compound words
+        const noSpaceResponse = normalizedResponse.replace(/\s+/g, '');
+        if (noSpaceResponse.includes(normalizedPhrase)) {
+          found = true;
+        }
       }
       // For numeric values, also check word form (e.g., "5" -> "five")
-      else if (normalizedPhrase === '5' && normalizedResponse.includes('five')) {
-        found = true;
-      } else if (normalizedPhrase === 'five' && normalizedResponse.includes('5')) {
-        found = true;
+      if (!found) {
+        if (normalizedPhrase === '5' && normalizedResponse.includes('five')) {
+          found = true;
+        } else if (normalizedPhrase === 'five' && normalizedResponse.includes('5')) {
+          found = true;
+        }
       }
       
       if (found) {

@@ -189,6 +189,12 @@ async function runEvaluations() {
     results.push(result);
 
     console.log(`Score: ${(result.score * 100).toFixed(1)}% ${result.passed ? '✅ PASS' : '❌ FAIL'}`);
+    
+    // Show what we're looking for
+    if (testCase.mustInclude && testCase.mustInclude.length > 0) {
+      console.log(`  Looking for: ${testCase.mustInclude.join(', ')}`);
+    }
+    
     result.checks.forEach((check) => {
       console.log(`  ${check.passed ? '✓' : '✗'} ${check.check}`);
       if (check.details) {
@@ -198,13 +204,17 @@ async function runEvaluations() {
     
     // Show full response for failed tests
     if (!result.passed) {
-      console.log(`\n  Full Response:`);
+      console.log(`\n  Full Response (${response.length} chars):`);
       console.log(`  ${'─'.repeat(56)}`);
       const lines = response.split('\n');
       lines.forEach(line => {
         console.log(`  ${line}`);
       });
       console.log(`  ${'─'.repeat(56)}`);
+      
+      // Show normalized response for debugging
+      const normalized = response.toLowerCase().replace(/\s+/g, ' ');
+      console.log(`  Normalized (first 200 chars): ${normalized.substring(0, 200)}...`);
     } else {
       // For passed tests, just show a preview
       console.log(`  Response preview: ${response.substring(0, 150)}${response.length > 150 ? '...' : ''}`);
