@@ -26,7 +26,11 @@ function checkRateLimit(ip: string): boolean {
 
 // Cache system prompt (generated once, reused)
 let cachedSystemPrompt: string | null = null;
-const SYSTEM_PROMPT_TTL = 1000 * 60 * 60; // 1 hour
+// Use shorter TTL in development (5 minutes) to pick up changes faster
+// In production, this could be longer (1 hour)
+const SYSTEM_PROMPT_TTL = process.env.NODE_ENV === 'production' 
+  ? 1000 * 60 * 60 // 1 hour in production
+  : 1000 * 60 * 5; // 5 minutes in development
 let promptCacheTime = 0;
 
 async function getSystemPrompt(): Promise<string> {
