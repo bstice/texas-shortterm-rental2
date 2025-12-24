@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import type { UIMessage } from 'ai';
 import { useChatContext } from '../hooks/useChatContext';
 import { WELCOME_MESSAGE } from '../utils/constants';
@@ -15,7 +15,7 @@ export default function MessageList({ messages }: MessageListProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const previousMessageCountRef = useRef(0);
   const lastUserMessageIdRef = useRef<string | null>(null);
-  const scrollTimeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const scrollTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   // Scroll helper function
   const scrollToBottom = (behavior: ScrollBehavior = 'smooth') => {
