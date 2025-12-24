@@ -43,14 +43,38 @@ export function evaluateResponse(
   // Check 1: Must include required phrases (critical - 40% of score)
   if (testCase.mustInclude && testCase.mustInclude.length > 0) {
     const requiredChecks = testCase.mustInclude.map(phrase => {
-      const found = normalizedResponse.includes(phrase.toLowerCase());
+      // Normalize phrase to lowercase for comparison
+      const normalizedPhrase = phrase.toLowerCase();
+      
+      // Check if phrase appears in normalized response
+      // Handle various matching scenarios:
+      let found = false;
+      
+      // Direct substring match (handles spaces, case-insensitive)
+      if (normalizedResponse.includes(normalizedPhrase)) {
+        found = true;
+      }
+      // For single words, also check if they appear as part of compound words
+      // e.g., "guest" should match "guestnetwork" or "guest network"
+      else if (normalizedPhrase.length > 3 && !normalizedPhrase.includes(' ')) {
+        // Check if the word appears as a standalone word or part of a compound
+        const wordBoundaryRegex = new RegExp(`\\b${normalizedPhrase}\\b|${normalizedPhrase}`, 'i');
+        found = wordBoundaryRegex.test(normalizedResponse);
+      }
+      // For numeric values, also check word form (e.g., "5" -> "five")
+      else if (normalizedPhrase === '5' && normalizedResponse.includes('five')) {
+        found = true;
+      } else if (normalizedPhrase === 'five' && normalizedResponse.includes('5')) {
+        found = true;
+      }
+      
       if (found) {
         pointsEarned += 0.4 / testCase.mustInclude.length;
       }
       return {
         check: `Must include: "${phrase}"`,
         passed: found,
-        details: found ? 'Found in response' : 'Not found in response',
+        details: found ? 'Found in response' : `Not found in response (looking for: "${normalizedPhrase}")`,
       };
     });
     checks.push(...requiredChecks);

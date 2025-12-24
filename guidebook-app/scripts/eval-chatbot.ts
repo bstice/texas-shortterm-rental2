@@ -185,8 +185,6 @@ async function runEvaluations() {
     console.log('Getting response...');
     const response = await getChatbotResponse(testCase.question);
     
-    console.log(`Response: ${response.substring(0, 150)}${response.length > 150 ? '...' : ''}`);
-    
     const result = evaluateResponse(response, testCase);
     results.push(result);
 
@@ -197,6 +195,20 @@ async function runEvaluations() {
         console.log(`    ${check.details}`);
       }
     });
+    
+    // Show full response for failed tests
+    if (!result.passed) {
+      console.log(`\n  Full Response:`);
+      console.log(`  ${'─'.repeat(56)}`);
+      const lines = response.split('\n');
+      lines.forEach(line => {
+        console.log(`  ${line}`);
+      });
+      console.log(`  ${'─'.repeat(56)}`);
+    } else {
+      // For passed tests, just show a preview
+      console.log(`  Response preview: ${response.substring(0, 150)}${response.length > 150 ? '...' : ''}`);
+    }
     console.log('─'.repeat(60) + '\n');
 
     // Small delay to avoid rate limiting
