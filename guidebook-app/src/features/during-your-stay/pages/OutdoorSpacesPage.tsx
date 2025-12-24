@@ -1,5 +1,5 @@
 import { useContent } from '@shared/hooks/useContent';
-import { Trees } from 'lucide-react';
+import { Trees, Star } from 'lucide-react';
 import Markdown from '@shared/components/ui/Markdown';
 import styles from './OutdoorSpacesPage.module.css';
 
@@ -36,7 +36,10 @@ export default function OutdoorSpacesPage() {
           <h2>Highlights</h2>
           <ul className={styles.highlightsList}>
             {outdoor.highlights.map((highlight, index) => (
-              <li key={index}>{highlight}</li>
+              <li key={index}>
+                <Star size={18} className={styles.highlightIcon} />
+                <span>{highlight}</span>
+              </li>
             ))}
           </ul>
         </section>
